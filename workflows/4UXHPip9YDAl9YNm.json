@@ -1,0 +1,1186 @@
+{
+  "active": false,
+  "connections": {
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "IF publish date is today",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF publish date is today": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Settings1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "XML": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "XML",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate1": {
+      "main": [
+        [
+          {
+            "node": "Blog List1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Blog List1": {
+      "main": [
+        [
+          {
+            "node": "Create Title, Slug, Meta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check data consistency1": {
+      "main": [
+        [
+          {
+            "node": "Split out chapters1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split out chapters1": {
+      "main": [
+        [
+          {
+            "node": "Merge chapters title and text1",
+            "type": "main",
+            "index": 1
+          },
+          {
+            "node": "Copywriter AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge chapters title and text1": {
+      "main": [
+        [
+          {
+            "node": "Final article text1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Final article text1": {
+      "main": [
+        [
+          {
+            "node": "OpenAI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Settings1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Adds excerpt": {
+      "main": [
+        [
+          {
+            "node": "Set Featured Image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Post blog to WP": {
+      "main": [
+        [
+          {
+            "node": "Adds excerpt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Resize Image": {
+      "main": [
+        [
+          {
+            "node": "Upload Media to WP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload Media to WP": {
+      "main": [
+        [
+          {
+            "node": "Update image meta data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update image meta data": {
+      "main": [
+        [
+          {
+            "node": "HTML",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTML": {
+      "main": [
+        [
+          {
+            "node": "Post blog to WP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Aggregate1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Create Title, Slug, Meta",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Title, Slug, Meta": {
+      "main": [
+        [
+          {
+            "node": "Check data consistency1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Copywriter AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Copywriter AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Merge chapters title and text1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI": {
+      "main": [
+        [
+          {
+            "node": "Resize Image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Create Title, Slug, Meta",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-05-17T10:19:37.090Z",
+  "id": "4UXHPip9YDAl9YNm",
+  "isArchived": false,
+  "meta": null,
+  "name": "auto ai content with genmini",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## Nhận Sơ đồ trang web XML của bài đăng trên blog\nĐiều này sẽ nhận được danh sách tất cả các bài đăng trên blog trên một trang web wordpress và đưa chúng vào 1 danh sách",
+        "height": 317,
+        "width": 870,
+        "color": 5
+      },
+      "id": "601131b9-2e62-4ed4-8281-2d93c0efd158",
+      "name": "Sticky Note11",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1180,
+        -180
+      ]
+    },
+    {
+      "parameters": {
+        "content": "Bắt đầu từ các từ khóa đã cho, tạo tiêu đề bài viết, phụ đề, chương, hình ảnh gợi ý và các yếu tố SEO cần thiết",
+        "height": 99.66080000000002,
+        "width": 287.370178643191,
+        "color": 7
+      },
+      "id": "9d09e5a1-da03-4879-ac21-5acb81cb29b2",
+      "name": "Sticky Note13",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        300,
+        340
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Cấu trúc bài viết",
+        "height": 371,
+        "width": 340,
+        "color": 6
+      },
+      "id": "e1b09b98-f244-4a03-b8d7-0451266a492b",
+      "name": "Sticky Note7",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        280,
+        280
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1k-EW8ao_B3Cg7o3pCkxhgeeXmyJGDvWzVnX8Gcru3Nk",
+          "mode": "list",
+          "cachedResultName": " AI Automation Writes Blog Posts in Seconds",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1k-EW8ao_B3Cg7o3pCkxhgeeXmyJGDvWzVnX8Gcru3Nk/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 765939828,
+          "mode": "list",
+          "cachedResultName": "AI gen Keywords",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1k-EW8ao_B3Cg7o3pCkxhgeeXmyJGDvWzVnX8Gcru3Nk/edit#gid=765939828"
+        },
+        "options": {}
+      },
+      "id": "9a1cb5e8-456a-465e-8c45-fe3a1aa45f70",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4,
+      "position": [
+        540,
+        -40
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "38P5AQchG6NSZWlG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$today}}",
+              "operation": "contains",
+              "value2": "={{ $('Google Sheets').item.json['Date to be published'] }}"
+            }
+          ]
+        }
+      },
+      "id": "a0bae44b-67eb-4a16-805e-b24c74a707cb",
+      "name": "IF publish date is today",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        740,
+        -40
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 3
+            }
+          ]
+        }
+      },
+      "id": "a1b16525-bdeb-4217-b5fb-12dd6c8d1939",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        360,
+        -40
+      ]
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "ba3f8a85-e34c-4436-83d1-14fd54f09539",
+      "name": "XML",
+      "type": "n8n-nodes-base.xml",
+      "typeVersion": 1,
+      "position": [
+        1380,
+        -60
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://{{ $json.wordpress_url }}/post-sitemap.xml ",
+        "options": {}
+      },
+      "id": "a7d0fa24-c42c-42e2-8dea-4d018b330a5c",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1220,
+        -60
+      ]
+    },
+    {
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "loc",
+              "renameField": true,
+              "outputFieldName": "Blog URL List"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5adaef0f-904e-49c5-9b45-df3aa844c12f",
+      "name": "Aggregate1",
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        1720,
+        -60
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "Blog list",
+              "stringValue": "={{ $json['Blog URL List'] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "749d7a3d-e24d-46d0-8d58-69c39b85ed01",
+      "name": "Blog List1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.1,
+      "position": [
+        1900,
+        -60
+      ]
+    },
+    {
+      "parameters": {
+        "content": "Tải hình ảnh vào thư viện phương tiện WP\nLuồng phụ này tạo một hình ảnh dalle, tải lên wordpress và thêm văn bản thay thế và siêu dữ liệu.",
+        "height": 364,
+        "width": 417,
+        "color": 6
+      },
+      "id": "3f692ac6-1f00-424c-901a-bfc274e4c550",
+      "name": "Sticky Note9",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        800,
+        880
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Data check",
+        "height": 372,
+        "width": 321,
+        "color": 4
+      },
+      "id": "8064b957-b068-4b5a-886b-f87a1e7bb043",
+      "name": "Sticky Note14",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        640,
+        280
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "Kiểm tra xem dữ liệu trả về của OpenAI có chính xác không",
+        "height": 80,
+        "width": 272.8190508599808,
+        "color": 7
+      },
+      "id": "dde6d085-557a-4f9f-ae44-66f1aea7377d",
+      "name": "Sticky Note17",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        660,
+        340
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "9c8c53ea-6079-48da-9d6e-dd527167b123",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              },
+              "leftValue": "={{ $json.output.title }}",
+              "rightValue": ""
+            },
+            {
+              "id": "a7fabfe1-3539-453a-93d9-8d6d395c3de4",
+              "operator": {
+                "type": "array",
+                "operation": "lengthGte",
+                "rightType": "number"
+              },
+              "leftValue": "={{ $json.output.chapters }}",
+              "rightValue": "={{ 1 }}"
+            },
+            {
+              "id": "a687081e-24e2-423c-a2da-b7c18baf0715",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              },
+              "leftValue": "={{ $json.output.subtitle }}",
+              "rightValue": ""
+            },
+            {
+              "id": "0a435a69-3699-4b98-b46f-40954c7a7816",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              },
+              "leftValue": "={{ $json.output.introduction }}",
+              "rightValue": ""
+            },
+            {
+              "id": "1a440144-21f3-42bd-9222-774bd564f3ef",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              },
+              "leftValue": "={{ $json.output.conclusions }}",
+              "rightValue": ""
+            },
+            {
+              "id": "834ce92d-b1e9-48ef-ae63-1d0841c900b5",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              },
+              "leftValue": "={{ $json.output.imagePrompt }}",
+              "rightValue": ""
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "c697a511-3cc8-41c9-b2c8-93e7aeb0c0dd",
+      "name": "Check data consistency1",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        760,
+        460
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "output.chapters",
+        "options": {}
+      },
+      "id": "f7a63324-15e3-47c2-a37a-d7f54b4e2151",
+      "name": "Split out chapters1",
+      "type": "n8n-nodes-base.splitOut",
+      "position": [
+        1040,
+        460
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combinationMode": "mergeByPosition",
+        "options": {}
+      },
+      "id": "190e66c8-65d1-4cf3-b50c-68e9e9a79311",
+      "name": "Merge chapters title and text1",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        1700,
+        440
+      ],
+      "typeVersion": 2.1
+    },
+    {
+      "parameters": {
+        "jsCode": "let article = \"\";\n\n// Introduction\nconst intro = $('Check data consistency1').item.json.output.introduction || '';\narticle += intro + \"<br><br>\";\n\n// Chapters\nfor (const item of $input.all()) {\n  const title = item.json.title || '';\n  const content = item.json.output || '';\n  \n  article += `<h2>${title}</h2>`;\n  article += content + \"<br><br>\";\n}\n\n// Conclusions\nconst conclusion = $('Check data consistency1').item.json.conclusions || '';\narticle += \"<h2>Final words</h2>\";\narticle += conclusion;\n\nreturn [\n  {\n    json: {\n      article\n    }\n  }\n];"
+      },
+      "id": "cd75f788-0e46-4348-823d-a0ecd14fb64c",
+      "name": "Final article text1",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1860,
+        440
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Featured image",
+        "height": 369,
+        "width": 510,
+        "color": 3
+      },
+      "id": "58949c32-d592-459d-81b2-3c46037fb537",
+      "name": "Sticky Note20",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        240,
+        880
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "Hình ảnh được tạo bằng Dall-E, tải lên WordPress và sau đó được kết nối với bài đăng dưới dạng hình ảnh nổi bật",
+        "height": 121,
+        "width": 186,
+        "color": 7
+      },
+      "id": "fe8edc34-e4e8-4026-9bf5-ddc4bf860e34",
+      "name": "Sticky Note22",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        300,
+        920
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Chapters split",
+        "height": 371,
+        "width": 225,
+        "color": 2
+      },
+      "id": "53fb8da6-692e-4107-8149-a2543168c423",
+      "name": "Sticky Note29",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        980,
+        280
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "Tách nội dung chương ra khỏi nút trước đó",
+        "height": 80,
+        "width": 185.6051460344073,
+        "color": 7
+      },
+      "id": "786ff7c7-82c3-4ac9-bcd3-360918504a26",
+      "name": "Sticky Note30",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1000,
+        340
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "Viết văn bản cho mỗi chương và tạo liên kết nội bộ cho seo",
+        "height": 80,
+        "width": 287.370178643191,
+        "color": 7
+      },
+      "id": "9b683a13-9a29-42ab-b908-41d7a55ef4ff",
+      "name": "Sticky Note31",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1240,
+        340
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Chapters text",
+        "height": 372,
+        "width": 340,
+        "color": 6
+      },
+      "id": "6d5a9c6a-3688-4d70-9981-58d509f1d150",
+      "name": "Sticky Note32",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1220,
+        280
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Chuẩn bị nội dung",
+        "height": 374,
+        "width": 491,
+        "color": 4
+      },
+      "id": "61ce2130-93d3-4325-84d8-01554732a249",
+      "name": "Sticky Note33",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1580,
+        280
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Tải lên WP\nCác nút này tạo HTML cho bài đăng được định dạng và tải lên WP, lấy ID bài đăng và sử dụng ID để thêm trích đoạn bài đăng và tải hình ảnh nổi bật",
+        "height": 361,
+        "width": 842,
+        "color": 2
+      },
+      "id": "e511954e-6941-4804-b05c-98df3f53b8db",
+      "name": "Sticky Note35",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1260,
+        880
+      ]
+    },
+    {
+      "parameters": {
+        "content": "Giảm kích thước hình ảnh",
+        "height": 116,
+        "width": 150,
+        "color": 7
+      },
+      "id": "cfa7e0d0-1156-4783-9bff-889085669c2d",
+      "name": "Sticky Note36",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        560,
+        920
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "## Thực hiện dựa trên ngày xuất bản\nYêu cầu một trang tính google với các cột cho ngày xuất bản, từ khóa trọng tâm, số lượng từ trong bài viết, số chương, ID tác giả, ID cat, giọng điệu, tiền tố DB, trang web",
+        "height": 315,
+        "width": 883
+      },
+      "id": "8aad2a83-57f0-4d54-8f16-d3192514dd0c",
+      "name": "Sticky Note37",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        280,
+        -180
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "3a433b0f-9957-4b64-ad81-359ab5e521d5",
+              "name": "wordpress_url",
+              "type": "string",
+              "value": "={{ $json['Website '] }}"
+            },
+            {
+              "id": "ec5430e3-92c5-46e4-8c2c-c87291680892",
+              "name": "keywords",
+              "type": "string",
+              "value": "={{ $json['Search Phrase'] }}"
+            },
+            {
+              "id": "5defb0a2-d921-4909-b10d-da59e1768496",
+              "name": "chapters",
+              "type": "string",
+              "value": "={{ $json.Chapters }}"
+            },
+            {
+              "id": "230ebd0b-73c2-4265-9b3c-57af7fbc48c8",
+              "name": "words",
+              "type": "number",
+              "value": "={{ $json['Word Count'] }}"
+            },
+            {
+              "id": "a47154b7-e274-42b5-93c8-b964fcea2fee",
+              "name": "Blog Category ID",
+              "value": "={{ $json['Category Id No '] }}",
+              "type": "string"
+            },
+            {
+              "id": "f82d18a5-b407-4a65-895e-c5951a2ee724",
+              "name": "Author ID",
+              "value": "={{ $json['Author ID'] }}",
+              "type": "string"
+            },
+            {
+              "id": "59ffb8a0-df68-484a-96ab-cfed5bd595eb",
+              "name": "Customer offer",
+              "value": "={{ $json['Customer offer'] }}",
+              "type": "string"
+            },
+            {
+              "id": "550d15ff-b913-461c-805d-92d03dbd5d04",
+              "name": "Call to action",
+              "value": "={{ $json['Call to Action URL'] }}",
+              "type": "string"
+            },
+            {
+              "id": "4eaab47a-b8d8-4b92-9618-3eb0d616ec1f",
+              "name": "In the Style of",
+              "value": "={{ $json['In the Style of'] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b253d5a7-4ccb-47d1-9931-d77acaa19282",
+      "name": "Settings1",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1000,
+        -40
+      ],
+      "typeVersion": 3.3
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://{{ $('Settings1').first().json[\"wordpress_url\"] }}/wp-json/wp/v2/posts/{{ $json.id }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "excerpt",
+              "value": "={{ $('Check data consistency1').first().json.output.googleExcerpt }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "00f7e939-732f-46a1-a354-98444b3e3037",
+      "name": "Adds excerpt",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1800,
+        1040
+      ]
+    },
+    {
+      "parameters": {
+        "title": "={{ $('Check data consistency1').first().json.output.title }}",
+        "additionalFields": {
+          "authorId": "={{ $('Settings1').first().json['Author ID'] }}",
+          "content": "={{ $('Final article text1').item.json.article }}",
+          "slug": "={{ $('Check data consistency1').first().json.output.slug }}",
+          "status": "draft",
+          "categories": "={{ $('Settings1').first().json['Blog Category ID'] }}"
+        }
+      },
+      "id": "04453138-744b-4b28-a062-c633c5652aba",
+      "name": "Post blog to WP",
+      "type": "n8n-nodes-base.wordpress",
+      "typeVersion": 1,
+      "position": [
+        1640,
+        1040
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://{{ $('Settings1').first().json[\"wordpress_url\"] }}/wp-json/wp/v2/posts/{{ $('Post blog to WP').first().json[\"id\"] }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "featured_media",
+              "value": "={{ $('Update image meta data').first().json[\"id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e75ab390-639c-41d8-ba8a-2947b7a87864",
+      "name": "Set Featured Image",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1960,
+        1040
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "rotate",
+        "dataPropertyName": "=data",
+        "rotate": 360,
+        "options": {
+          "format": "jpeg",
+          "quality": 20
+        }
+      },
+      "id": "4dc19022-3a09-46d4-b2d0-e0e244c66817",
+      "name": "Resize Image",
+      "type": "n8n-nodes-base.editImage",
+      "typeVersion": 1,
+      "position": [
+        580,
+        1060
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://{{ $('Settings1').first().json[\"wordpress_url\"] }}/wp-json/wp/v2/media",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "content-disposition",
+              "value": "=attachment; filename={{ $binary.data.fileName }}.{{ $binary.data.fileExtension }}"
+            },
+            {
+              "name": "content-type",
+              "value": "={{ $binary.data.mimeType }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "binaryData",
+        "inputDataFieldName": "data",
+        "options": {}
+      },
+      "id": "e08717f3-7edb-4a5f-9025-6a072e60755a",
+      "name": "Upload Media to WP",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        940,
+        1040
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://{{ $('Settings1').first().json[\"wordpress_url\"] }}/wp-json/wp/v2/media/{{ $json.id }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "=title ",
+              "value": "={{ $('Check data consistency1').first().json.output.title }}"
+            },
+            {
+              "name": "slug",
+              "value": "={{ $('Check data consistency1').first().json.output.slug }}"
+            },
+            {
+              "name": "alt_text",
+              "value": "=An image illustrating {{ $('Check data consistency1').first().json.output.title }}"
+            },
+            {
+              "name": "caption",
+              "value": "={{ $('Check data consistency1').first().json.output.title }}"
+            },
+            {
+              "name": "description",
+              "value": "=Ảnh minh họa của bài viết {{ $('Check data consistency1').first().json.output.title }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d2cbe93b-634a-4c2e-adff-f8eba8df6c89",
+      "name": "Update image meta data",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1300,
+        1040
+      ]
+    },
+    {
+      "parameters": {
+        "html": "<!DOCTYPE html>\n\n<html>\n<head>\n  <meta charset=\"UTF-8\" />\n  <title>My HTML document</title>\n</head>\n<body>\n  <div class=\"container\">\n    <h1>{{ $('Check data consistency1').first().json.output.title }}</h1>\n    \n    <p>{{ $('Final article text1').item.json.article }}</p>\n  </div>\n</body>\n</html>\n\n<style>\n.container {\n  background-color: #ffffff;\n  text-align: left;\n  padding: 16px;\n  border-radius: 8px;\n}\n\nh1 {\n  color: #555555;\n  font-size: 24px;\n  font-weight: bold;\n  padding: 8px;\n}\n\nh2 {\n  color: #555555;\n  font-size: 18px;\n  font-weight: bold;\n  padding: 8px;\n}\n</style>\n\n<script>\nconsole.log(\"Hello World!\");\n</script>"
+      },
+      "id": "7b6d229a-a655-45a6-b820-30e10ced6dba",
+      "name": "HTML",
+      "type": "n8n-nodes-base.html",
+      "typeVersion": 1.2,
+      "position": [
+        1480,
+        1040
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "urlset.url",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        1540,
+        -60
+      ],
+      "id": "5af77883-7ffe-4026-808e-87394e4c7629",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are a professional Vietnamese content writer and SEO specialist.\n\nYour task is to write a fully structured, SEO-optimized blog post in Vietnamese based on the topic:  \n**{{ $('Settings1').first().json[\"keywords\"] }}**\n\n⚠️ The output will be parsed by an automatic JSON Output Parser — do not include any formatting, explanation, or markdown.  \n⚠️ Just return raw values (text only). Do not wrap the output in markdown, XML, or code blocks.\n\nStandard formula for writing Title Tag Semantic SEO:\nTitle = Central Entity + Macro Context + Lexical Relations\nNeed to ensure that the title reflects the central search intent and can be analyzed according to the RDF model (Subject - Predicate - Object).\n\nRDF (Resource Description Framework) Analysis:\n- Subject: Subject (Example: Zippo, Orchid)\n- Predicate: Action (Example: Compare, Care, Use)\n- Object: Result or object of impact (Example: Real and fake goods, Beautiful blooms at home)\n\nOptimize Lexical Relations for Title :\na. Antonym: Compare opposites, attract debate\nb. Hyponym: List small categories in a group\nc. Meronymy: Include parts of the subject\nd. Synonym: Expand keywords and search query scope\n\nChecklist Title Semantic SEO:\n- Has Central Entity\n- Clear Macro context\n- At least 1 Lexical Relations\n- Correctly reflects Search Intent\n- Optimize synonym/antonym keywords\n- Can analyze according to RDF\n\n---\n\nPlease return the following fields exactly, in Vietnamese:\n\n1. **title** — A compelling blog title written without colons (:) or markdown.  \n2. **subtitle** — A concise subtitle clearly explaining the focus of the article.  \n3. **introduction** — A ~60-word paragraph introducing the topic smoothly and naturally. Do not use phrases like “In this article” or “In today’s world”.  \n4. **googleExcerpt** — Max 160 characters summarizing the article for Google search preview.  \n5. **slug** — A lowercase slug with 3–5 words, dash-separated, must contain the keyword: {{ $('Settings1').first().json[\"keywords\"] }}  \n6. **googleMetaDescription** — Max 156 characters, written in active voice. Must include the keyword and a call to action. Do not use apostrophes.  \n7. **conclusions** — A ~60-word paragraph that summarizes the key points and takeaways.  \n8. **imagePrompt** — A photorealistic DALL·E 3 image description for this article. Use a 16:9 ratio. No additional context or explanation.\n\n---\n\n9. **chapters** — Create exactly {{ $('Settings1').first().json[\"chapters\"] }} chapters as a list of JSON objects.  \nEach chapter must include:\n\n- **title** — A short title without colon or numbering  \n- **prompt** — A detailed description of what to write in the chapter, with depth, logical flow, and SEO focus.\n\nChapters must:\n- Be related and follow a logical flow\n- Avoid repeating the same points\n- Explore different subtopics or angles\n- Be written in Vietnamese\n- Use only basic HTML formatting such as **bold**, *italic*, and `<ul><li>` lists\n- Do NOT use markdown\n\nIn the **final chapter only**, subtly include the call-to-action URL:  \n**{{ $('Settings1').first().json[\"Call to action\"] }}**\n\nYou must also **weave in the value, offer, and benefits** from this service throughout the content where relevant:  \n**{{ $('Settings1').first().json[\"Customer offer\"] }}**\n\n⚠️ Output must be valid and complete. All 9 fields must be returned with real content.  \n⚠️ Return only the content. Do not include pretext, explanation, or wrapper text.",
+        "hasOutputParser": true,
+        "options": {}
+      },
+      "id": "955426ed-0fea-4779-9439-0c247b5bdf76",
+      "name": "Create Title, Slug, Meta",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "position": [
+        320,
+        460
+      ],
+      "typeVersion": 1.8
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro-exp-03-25",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        320,
+        660
+      ],
+      "id": "fc1b674e-a1a1-430f-a713-0aea24db4a3c",
+      "name": "Google Gemini Chat Model"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Write a chapter for the article: {{ $('Check data consistency1').item.json.output.title }}, that talks about {{ $('Settings1').first().json[\"keywords\"] }} in the style of {{ $('Settings1').first().json['In the Style of'] }}\nThis is the prompt for the chapter titled {{ $json.title }}: {{ $json.prompt }}.\n\nGuidelines:\n- Don't use the phrase \"In today's fast paced world\" or any similar such phrases.\n- Do not use any names of products or services. \n- Just return the plain text for each chapter (no JSON structure).\n- Don't use markdown for formatting.\n- Use HTML for formatting, but limited to bold, italic and lists.\nThis prompt is designed to help users write structured and informative paragraphs in response to complex questions, specifically for essay or academic-style formats. \n\nIt follows a strict structure when answering a prompt: beginning with a clear and direct answer that includes all Sub-Entities in the first 40 words, with Sub-Entities and the answer highlighted in bold. It then expands the context in the next sentence. \n\nThe second half of the paragraph transitions with a sentence like \"People do X for the following reasons,\" followed by detailed explanations of each Sub-Entity using the entity–attribute–value model.\n\n Each explanation must cite academic research or university studies with institution, department, date, and specific findings to support each point. The GPT must maintain clarity, structure, and academic tone throughout the response.\n- Don't add internal titles or headings. \n- The length of each chapther should be around {{ Math.round(($('Settings1').first().json.words - 120)/ $('Settings1').first().json.chapters) }} words long\n- Try to keep most sentences less than 20 words long. \n- Go deep in the topic you treat, don't just throw some superficial info\n{{ $itemIndex > 0 ? \"- The previous chapter talks about \" + $input.all()[$itemIndex-1].json.title : \"\" }}\n{{ $itemIndex > 0 ? \"- The promt for the previous chapter is \" + $input.all()[$itemIndex-1].json.prompt : \"\" }}\n{{ $itemIndex < $input.all().length ? \"- The following chapter will talk about \" + $input.all()[$itemIndex+1].json.title: \"\" }}\n{{ $itemIndex < $input.all().length ? \"- The prompt for the following chapter is \" + $input.all()[$itemIndex+1].json.prompt : \"\" }}\n- Consider the previous and following chapters while writing the text for this chapter. The text must be coherent with the previous and following chapters.\n- Review this list of blog urls {{ $('Blog List1').first().json[\"Blog URL List\"] }} and then select a blog url that covers a topic discussed in each chapter. Add that link as <a href> HTML link in the chapter content. Use the URL provided to generate relevant hyperlink text for the <a href> links. \n- Only link to each link ONCE. \n- If there is no blog url in the list that is relevant to the chapter do not add any link.\n- This chapter should not repeat the concepts already exposed in the previous chapter.\n- This chapter is a part of a larger article so don't include an introduction or conclusions. This chapter should merge with the rest of the article.",
+        "options": {}
+      },
+      "id": "15bdd233-045a-4e4c-beb6-9000a3be0344",
+      "name": "Copywriter AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "position": [
+        1260,
+        440
+      ],
+      "typeVersion": 1.8
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro-exp-03-25",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        1320,
+        660
+      ],
+      "id": "d137d4ef-ee77-4ad9-b104-2ded521aac0d",
+      "name": "Google Gemini Chat Model1"
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "prompt": "=Generate a photographic image to be used as the cover image for the article titled: {{ $('Check data consistency1').first().json.output.title }}. This is the prompt for the image: {{ $('Check data consistency1').first().json.output.imagePrompt }}, photography, realistic, sigma 85mm f/1.4",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        320,
+        1080
+      ],
+      "id": "782a0529-00ba-49b1-94fd-adc1b574b442",
+      "name": "OpenAI"
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"title\": \"string\",\n  \"subtitle\": \"string\",\n  \"introduction\": \"string\",\n  \"googleExcerpt\": \"string\",\n  \"slug\": \"string\",\n  \"googleMetaDescription\": \"string\",\n  \"conclusions\": \"string\",\n  \"imagePrompt\": \"string\",\n  \"chapters\": [\n    {\n      \"title\": \"string\",\n      \"prompt\": \"string\"\n    }\n  ]\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        540,
+        700
+      ],
+      "id": "d7fb996e-fc7e-4618-8bce-4c7eadf507cb",
+      "name": "Structured Output Parser"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-05-17T10:19:37.098Z",
+      "updatedAt": "2025-05-17T10:19:37.098Z",
+      "role": "workflow:owner",
+      "workflowId": "4UXHPip9YDAl9YNm",
+      "projectId": "quf7HR2xEtUzOS9Z"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-05-17T11:35:48.000Z",
+  "versionId": "6948e4a2-4f4f-406e-b7d7-00d787b5f928"
+}
