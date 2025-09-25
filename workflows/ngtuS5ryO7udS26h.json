@@ -1,0 +1,1618 @@
+{
+  "active": false,
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Date & Time",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tạo Prompt cho ảnh": {
+      "main": [
+        [
+          {
+            "node": "Wait2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser2": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Tạo Prompt cho ảnh",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tạo ảnh": {
+      "main": [
+        [
+          {
+            "node": "Convert to File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Tạo Prompt cho ảnh",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to File": {
+      "main": [
+        [
+          {
+            "node": "Resize Image1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Resize Image1": {
+      "main": [
+        [
+          {
+            "node": "Upload Image to Wordpress",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time": {
+      "main": [
+        [
+          {
+            "node": "Lấy yêu cầu",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lấy yêu cầu": {
+      "main": [
+        [
+          {
+            "node": "Lặp từng từ khóa1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tool: Research Topic": {
+      "ai_tool": [
+        [
+          {
+            "node": "Nghiên cứu chủ đề",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Nghiên cứu chủ đề",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser1": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Nghiên cứu chủ đề",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Nghiên cứu chủ đề": {
+      "main": [
+        [
+          {
+            "node": "research_output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Phân tích thành phần",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Phân tích thành phần",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Viết content SEO",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Viết content SEO": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Phân tích thành phần": {
+      "main": [
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload Image to Wordpress": {
+      "main": [
+        [
+          {
+            "node": "Gen Metadata Image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Meta Data": {
+      "main": [
+        [
+          {
+            "node": "Markdown",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Gen Metadata Image",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser3": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Gen Metadata Image",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gen Metadata Image": {
+      "main": [
+        [
+          {
+            "node": "Update Meta Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Post Blog To Wordpress": {
+      "main": [
+        [
+          {
+            "node": "Set Image + Description",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Image + Description": {
+      "main": [
+        []
+      ]
+    },
+    "Markdown": {
+      "main": [
+        [
+          {
+            "node": "Code2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Phân tích Persona",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Phân tích Persona": {
+      "main": [
+        [
+          {
+            "node": "persona_output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lặp từng từ khóa1": {
+      "main": [
+        [
+          {
+            "node": "Nghiên cứu chủ đề",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Phân tích Persona",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          },
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "research_output": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "persona_output": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Viết content SEO",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge1": {
+      "main": [
+        [
+          {
+            "node": "Code1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "node": "Update Plan",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code2": {
+      "main": [
+        [
+          {
+            "node": "Post Blog To Wordpress",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Phân tích thành phần",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "Tạo Prompt cho ảnh",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait2": {
+      "main": [
+        [
+          {
+            "node": "Code3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code3": {
+      "main": [
+        [
+          {
+            "node": "Tạo ảnh",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-07-06T08:44:20.359Z",
+  "id": "ngtuS5ryO7udS26h",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "SEO Wordpress - Content Upgrade - 6/7/2025 - Virion",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -100,
+        -100
+      ],
+      "id": "534cb0a2-ac42-4de8-896e-f0c119b70641",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Nội dung bài viết: {{ $('Viết content SEO').item.json.output }}",
+        "hasOutputParser": true,
+        "messages": {
+          "messageValues": [
+            {
+              "message": "=Bạn là 1 Prompt Engineer. Dựa theo [Nội dung bài viết]. Hãy hỗ trợ tôi tạo “1 câu lệnh hướng dẫn AI hỗ trợ tạo ảnh”\nYêu cầu Prompt phải:\n- Phù hợp nội dung bài viết\n- Sử dụng hình ảnh chân thật, hiện đại, có thể lấy từ internet\n- Thêm tên thương hiệu “Virion”\n- Tránh tên người thật, chủ đề chính trị, tôn giáo hoặc bạo lực.\n- Tránh dùng các ngôn từ nhạy cảm, vi phạm tiêu chuẩn đạo đức, dễ hiểu sai.\n- Không sử dụng các từ liên quan chính trị, tôn giáo, bạo lực, chỉ mô tả trung lập.\n- Phản hồi trong khoảng 300-500 ký tự.\n- Kết quả trả về gồm: \"Prompt_img\" và \"Name_img\"\n- Cung cấp phản hồi bằng tiếng anh. \n"
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        -60,
+        880
+      ],
+      "id": "70788434-3aa0-45e1-af09-1f346c7b2494",
+      "name": "Tạo Prompt cho ảnh"
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n\t\"prompt_img\": \"hãy giúp tôi tạo prompt...\",\n  \"name_img\": \"seo_img\"\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        100,
+        1040
+      ],
+      "id": "68fada50-ee59-495c-b21f-e4b4b1733ca1",
+      "name": "Structured Output Parser2"
+    },
+    {
+      "parameters": {
+        "operation": "toBinary",
+        "sourceProperty": "candidates[0].content.parts[1].inlineData.data",
+        "binaryPropertyName": "=data",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        1020,
+        880
+      ],
+      "id": "e92c75a2-6d45-4490-b9c5-cffada50e416",
+      "name": "Convert to File"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp-image-generation:generateContent",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "key",
+              "value": "AIzaSyCvbeP2GYURwnTPsfJJ5AeKQ6rMlFwKZD4"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"contents\": [\n    {\n      \"parts\": [\n        {\n          \"text\": \"{{$json.prompt_img}}\"\n        }\n      ]\n    }\n  ],\n  \"generationConfig\": {\n    \"responseModalities\": [\"Text\", \"Image\"]\n  }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        800,
+        880
+      ],
+      "id": "502c6ac5-840a-4725-8989-4bd464a8e1c1",
+      "name": "Tạo ảnh"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-1.5-flash-002",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -60,
+        1040
+      ],
+      "id": "033172ca-f1ef-4a8c-8cc1-75623888e3e8",
+      "name": "Google Gemini Chat Model3",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "liF9LQ41TU5GXcpB",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "resize",
+        "options": {
+          "fileName": "={{ $('Tạo Prompt cho ảnh').item.json.output.name_img }}"
+        }
+      },
+      "type": "n8n-nodes-base.editImage",
+      "typeVersion": 1,
+      "position": [
+        1020,
+        1040
+      ],
+      "id": "1b656ebc-04a4-473a-b9f7-be8ef6ccc5b1",
+      "name": "Resize Image1"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "195ieMMoFk509Dg8g4MBGLYzpw0jNx651o8b4zP23wQ4",
+          "mode": "list",
+          "cachedResultName": "Bản sao của Data test n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/195ieMMoFk509Dg8g4MBGLYzpw0jNx651o8b4zP23wQ4/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1569143008,
+          "mode": "list",
+          "cachedResultName": "test seo",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/195ieMMoFk509Dg8g4MBGLYzpw0jNx651o8b4zP23wQ4/edit#gid=1569143008"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Ngày đăng",
+              "lookupValue": "={{ $json.formattedDate }}"
+            },
+            {
+              "lookupColumn": "Trạng thái"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        280,
+        -100
+      ],
+      "id": "f4d37468-b330-4cbb-b39b-aad5d6ceafaa",
+      "name": "Lấy yêu cầu",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "RT62vkMV5zYwEIvU",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "formatDate",
+        "date": "={{ $json.timestamp }}",
+        "format": "custom",
+        "customFormat": "dd/MM/yyyy",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 2,
+      "position": [
+        100,
+        -100
+      ],
+      "id": "d67d12ca-e90a-466c-9104-a71a43e02443",
+      "name": "Date & Time"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Chủ đề: {{ $json['Người dùng nhập chủ đề'] }}\nKeyword chính: {{ $json['Từ khóa chính'] }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=Bạn là một chuyên gia phân tích và tổng hợp nội dung, bạn có khả năng truy cập các công cụ khác nhau để nghiên cứu. Dựa theo yêu cầu được đưa vào, bạn sẽ sử dụng công cụ \"Research_Tool\" nào để nghiên cứu nội dung tốt nhất. Kết quả trả về sẽ là tổng hợp \"outline\" và \"từ khóa phụ\" để chuyên viên copy writer có thể hoàn thiện nội dung tốt nhất."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        820,
+        -120
+      ],
+      "id": "2caf9c6c-77a7-4170-a605-4ae268eb9d1c",
+      "name": "Nghiên cứu chủ đề"
+    },
+    {
+      "parameters": {
+        "name": "Research_Tool",
+        "description": "Sử dụng tool này để nghiên cứu các chủ đề mới nhất, liên quan yếu tố thời gian. Đầu vào sẽ là một chủ đề và từ khóa chính.",
+        "workflowId": {
+          "__rl": true,
+          "value": "w1NpzVTG7DDcueoB",
+          "mode": "list",
+          "cachedResultName": "Search intent"
+        },
+        "fields": {
+          "values": [
+            {
+              "name": "Người dùng nhập chủ đề",
+              "stringValue": "={{ $('Lấy yêu cầu').item.json[\"Người dùng nhập chủ đề\"] }}"
+            },
+            {
+              "name": "Main Keyword",
+              "stringValue": "=Main Keyword: {{ $('Lấy yêu cầu').item.json[\"Từ khóa chính\"] }}"
+            }
+          ]
+        },
+        "jsonSchemaExample": ""
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 1.3,
+      "position": [
+        940,
+        40
+      ],
+      "id": "7178b3cf-8b1e-4990-8d72-66cbea34b5b5",
+      "name": "Tool: Research Topic"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        820,
+        40
+      ],
+      "id": "a4e254ac-867f-422c-9184-bd00d3fc7b3b",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "Q4OXSJLN8O6mYMaG",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"tu_khoa_phu\": [\"...\"],\n  \"outline\": [\n    \"1. ...\",\n    \"2. ...\",\n    \"...\",\n    \"n. ...\"\n  ]\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        1020,
+        40
+      ],
+      "id": "88cb3f89-b94d-433d-a594-1c5cd1f8238c",
+      "name": "Structured Output Parser1"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-1.5-flash",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        900,
+        600
+      ],
+      "id": "7148487c-f9ac-4e98-9e7d-9ddb9fb90054",
+      "name": "Google Gemini Chat Model2",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "liF9LQ41TU5GXcpB",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Từ nội dung \"{{ $json.output }}\"",
+        "hasOutputParser": true,
+        "messages": {
+          "messageValues": [
+            {
+              "message": "=Hãy tạo cho tôi tiêu đề và mô tả, để đăng website.\nKết quả trả về có dạng jjson \"title\" \"des\" \"custom URL\".\nChỉ phản hồi nội dung, không cung cấp thêm bất cứ phản hồi nào khác từ bạn."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.5,
+      "position": [
+        900,
+        460
+      ],
+      "id": "dc8bf767-1e69-43b2-8de7-b02efdd57eb0",
+      "name": "Phân tích thành phần"
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n\t\"title\": \"tiêu đề\",\n\t\"des\": \"mô tả\",\n    \"custom URL\": \"cach-viet-content-chuan-seo\"\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        1060,
+        620
+      ],
+      "id": "034e346a-ede5-4666-9768-cb17a209c21b",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -60,
+        600
+      ],
+      "id": "782b13ba-348f-4300-8afa-61acb8036d75",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "Q4OXSJLN8O6mYMaG",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=- Nội dung đã tổng hợp outline: {{ $json.outline }}\n- Keyword phụ: {{ $json.tu_khoa_phu }}\n- Persona: {{ $json.persona_output }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=Bạn là một chuyên viên Content SEO cho công ty TNHH Truyền Thông Digizone Việt Nam (tên gọi khác là Digizone Việt Nam Hoặc ngắn gọn hơn là Digizone).\n\n###[Hãy Viết một bài viết dài ít nhất 3800 từ tiếng Việt về từ khóa chính {{ $json.tu_khoa_chinh }} được tối ưu hóa cho SEO nhằm mục đích xuất hiện nổi bật trên Google Discovery và đứng đầu kết quả tìm kiếm của Google. Đồng thời đáp ứng tất cả các tiêu chí bên dưới:]\n\nĐối tượng chính xem Nội dung này:\n{{ $json.persona_output }}\n###[Ý định tìm kiếm của người dùng (Search intents):\n{{ $json.y_dinh_tim_kiem }}\nDùng thẻ H2 cho các phần chính, H3 cho phụ.\n\n###[Hãy viết một tiêu đề bài viết chuẩn SEO, có độ dài từ 6 đến 9 từ, với từ khóa chính và phải đặt ở đầu tiêu đề. Tiêu đề phải viết hoa chữ cái đầu của mỗi từ, thể hiện đúng và đầy đủ ngữ cảnh tìm kiếm của người dùng khi search từ khóa này, bao gồm cả định nghĩa, ứng dụng và lợi ích của nó]\n\n###[Viết 1 đoạn mở bài 2 câu cho bài viết về  từ khóa chính,  đề cập đến “virion.vn”. Câu đầu tiên phải bắt đầu bằng từ khóa chính và bao gồm các từ khóa ngữ nghĩa liên quan.  Sử dụng ngôn ngữ tích cực, thân thiện, không dùng tiếng Anh.  Đưa ra giải pháp.  Đoạn cuối mở bài thêm 2-3 từ khóa LSI.  Sử dụng từ đồng nghĩa với từ khóa chính.]\n\nLưu ý:\n###[Nội dung sản xuất tập trung vào đối tượng: {{ $json.persona_output }}]\n###[Nội dung khơi gợi mong muốn được tư vấn giải quyết thắc mắc về nhu cầu ở {{ $json.y_dinh_tim_kiem }} ]\n###[Cả nội dung bài viết được triển khai theo cấu trúc AIDA, không cần phải để giải thích]\n\nMục đích của Bài Viết:\n###[Được đối tượng chia sẻ, lưu lại, ghim bài]\n###[Bấm nút liên hệ để tư vấn theo nhu cầu đã phân tích ]\n###[Khơi gợi khao khát được tư vấn, xử lý ngay thắc mắc của họ]\n###[Tuyệt đối Không sử dụng dấu  chấm cảm (!) và dấu ngoặc kép (\") trong nội dung văn bản]\n\nYêu cầu trong bài Viết:\n###[Nội dung bài viết phải có trích dẫn nghiên cứu khoa học, thông tin chính thống từ nguồn uy tín ở Việt Nam và thế giới]\n###[Hướng dẫn chi tiết rõ ràng từng bước, có số liệu cụ thể]\n###[Sử dụng danh xưng là Virion]\n###[Bài viết phải khéo léo diễn tả các ưu điểm nổi bât cũng như PR giới thiệu cho Virion, đặc biệt nếu là các list địa điểm thì hãy đưa Virion vào vị top trong danh sách đó]\n\n###[Dựa vào phần nội dung “Khó khăn của khách hàng” & “Khách hàng cần dịch vụ/sản phẩm”. Bạn tạo ra kêu gọi hành động (CTA) khiến khách hàng liên hệ được tư vấn/mua hàng tại web của “virion.vn” hoặc với Hotline: +84 768 685 959]\n\n###[Sử dụng các thông tin liên hệ sau trong bài viết, trình bày xuống dòng đẹp mắt: Shop Thời Trang Xuất Khẩu - Virion. SĐT: +84 768 685 959, Địa chỉ: 127 Bàu Cát 2, P12, Q. Tân Bình, Hồ Chí Minh. Website:Virion.vn]\n\nTriển khai bài viết\n\n###[Bài viết được triển khai với từ khóa chính là \"{{ $json.tu_khoa_chinh }}\" dài ít nhất 3800 chữ.  Nội dung cung cấp phải đáp ứng 100% các ý định tìm kiếm (Search intents) của người dùng được đề cập ở trên]\n\n###[Bạn chắc chắn phải viết các đoạn văn theo cách tích cực, yêu đời và đạt điểm Toàn bộ tài liệu của google NLP nhưng vẫn giữ nguyên ý nghĩa của nó, Tối thiểu phải lớn hơn 0,5]\n###[Tập trung vào việc sử dụng ngôn ngữ và cấu trúc câu tích cực trong khi vẫn truyền tải thông tin chính xác.]\n###[Thay vì nhấn mạnh vào hình phạt và hậu quả tiêu cực, hãy tập trung vào lợi ích của việc tuân thủ luật pháp và duy trì phạm vi bảo hiểm đầy đủ.]\n###[Cho phép linh hoạt trong việc lựa chọn các từ đồng nghĩa phù hợp nhất với ngữ cảnh và gợi lên cảm xúc tích cực, thay vì bắt buộc sử dụng chúng một cách nghiêm ngặt.]\n###[Tiêu đề 2 dài tối đa 250 từ, Tiêu đề 3 dài tối đa 180 từ]\n###[Các tiêu đề không cần thiết phải được đánh số thứ tự nhưng phải rõ ràng và được bôi đậm, tức không phải dạng liệt kê ]\n###[Bài viết phải tuân thủ các tiêu chuẩn E-E-A-T (Kinh nghiệm, Chuyên môn, Quyền hạn và Độ tin cậy) và YMYL (Tiền bạc hoặc Cuộc sống của bạn) và được tối ưu hóa Onpage]\n###[Ưu tiên sử dụng định dạng bảng và danh sách tối đa 3 cột]\n###[Các bài viết xuất hiện trên Google Discovery, do đó nó phải được tối ưu hóa một cách chuyên nghiệp để thu hút sự chú ý của người đọc và đáp ứng các nguyên tắc của Google]\n\n###[Sử dụng các thuật ngữ chuyên ngành một cách chính xác, nhưng cần giải thích rõ ràng để người đọc dễ hiểu]\n###[Sử dụng các số liệu thống kê, biểu đồ để minh họa cho những phân tích của bạn]\n###[Cập nhật thông tin mới nhất có thể là giá, diện tích, khối lượng, số lượng,... (chi tiết rõ ràng) và lập bảng cho nội dung sản xuất]\n\n###[Dựa trên từ khóa chính là \"{{ $json.tu_khoa_chinh }}\" hãy tự động thống kê ra thêm các từ khóa ở mỗi nhóm theo liệt kê, mỗi nhóm ít nhất 5 từ: Từ khóa chính (Primary Keyword), Từ khóa liên quan (Related Keywords), Từ khóa dài (Long-tail Keywords), Từ khóa đồng nghĩa (Synonyms), Từ khóa ngữ cảnh (Contextual Keywords), Từ khóa LSI (Salient LSI keywords), Thực thể LSI (Semantic LSI entities), Thực thể nổi bật (Salient entities), Chủ đề liên quan đến từ khóa chính (Related topics), Thuộc tính gốc ( Root attributes), Thuộc tính hiếm (Rare attributes), Đặc điểm độc đáo (Unique characteristics). Và từ khóa phụ:{{ $json.tu_khoa_phu }}. Hãy đó thêm tất cả các từ khóa này vào nội dung bài viết một cách tự nhiên nhất, không máy móc, không cần liệt kê ra]\n\nTôi sẽ gọi Prompt này là \"PR1\"\n###[Sử dụng toàn bộ yêu cầu ở Prompt \"PR1\", Tiếp tục sản xuất nội dung của bài viết cho đến hết, bắt đầu tiếp từ phần:Bảng so sánh các công cụ hỗ trợ xây dựng và theo dõi externa link]\n###[Không sử dụng dấu ngoặc kép (“) trong nội dung tạo ra]"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        -60,
+        460
+      ],
+      "id": "a501066e-7aed-4a8a-83c3-88e4a91aa3ac",
+      "name": "Viết content SEO"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://virion.vn/wp-json/wp/v2/media",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "content-disposition",
+              "value": "=attachment; filename={{ $binary.data.fileName }}.{{ $binary.data.fileExtension  }}"
+            },
+            {
+              "name": "content-type",
+              "value": "={{ $binary.data.mimeType  }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "binaryData",
+        "inputDataFieldName": "data",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -100,
+        1300
+      ],
+      "id": "e463a81a-f69a-48d1-8dd0-573f9834d8d4",
+      "name": "Upload Image to Wordpress",
+      "credentials": {
+        "wordpressApi": {
+          "id": "xcn8ReMEOqIw7qwk",
+          "name": "Wordpress account Virion"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://virion.vn/wp-json/wp/v2/media/{{ $('Upload Image to Wordpress').item.json.id }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "title",
+              "value": "={{ $json.output.Title }}"
+            },
+            {
+              "name": "slug",
+              "value": "={{ $json.output.Slug }}"
+            },
+            {
+              "name": "alt_text",
+              "value": "={{ $json.output['Alternative Text'] }}"
+            },
+            {
+              "name": "caption",
+              "value": "={{ $json.output.Caption }}"
+            },
+            {
+              "name": "description",
+              "value": "={{ $json.output.Description }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        940,
+        1300
+      ],
+      "id": "c277dc70-24cc-4fa6-b337-167130905833",
+      "name": "Update Meta Data",
+      "credentials": {
+        "wordpressApi": {
+          "id": "xcn8ReMEOqIw7qwk",
+          "name": "Wordpress account Virion"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.0-flash-exp",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        300,
+        1420
+      ],
+      "id": "9eb40c3c-4b46-45f6-837d-a7291051d632",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "liF9LQ41TU5GXcpB",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n\t\"Alternative Text\": \"Tên thay thế\",\n  \t\"Title\": \"Tiêu đề hình ảnh\",\n  \t\"Caption\": \"Đầu đề\",\n  \t\"Description\": \"Mô tả\",\n  \t\"Slug\": \"hinh-anh-moi-cap-nhat\"\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        680,
+        1420
+      ],
+      "id": "fd91b04e-0855-4f9a-b0a6-4894cf6707fc",
+      "name": "Structured Output Parser3"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Tiêu đề: {{ $('Phân tích thành phần').item.json.output.title }}\nMô tả bài viết: {{ $('Phân tích thành phần').item.json.output.des }}\nUrl bài viết: {{ $('Phân tích thành phần').item.json.output['custom URL'] }}",
+        "hasOutputParser": true,
+        "messages": {
+          "messageValues": [
+            {
+              "message": "=Hãy tạo cho tôi các thành phần metadata của hình ảnh giúp tối ưu SEO trên website wordpress, bao gồm:\n- Alternative Text:\n- Title:\n- Caption:\n- Description:\n- Slug:\n"
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.5,
+      "position": [
+        300,
+        1300
+      ],
+      "id": "6d070322-33ac-43fb-bea3-57e0edc2cedc",
+      "name": "Gen Metadata Image"
+    },
+    {
+      "parameters": {
+        "title": "={{ $('Phân tích thành phần').item.json.output.title }}",
+        "additionalFields": {
+          "content": "={{ $json.data }}",
+          "slug": "={{ $('Phân tích thành phần').item.json.output['custom URL'] }}",
+          "status": "publish",
+          "categories": [
+            66,
+            65
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.wordpress",
+      "typeVersion": 1,
+      "position": [
+        300,
+        1600
+      ],
+      "id": "2051a567-6fc7-496f-b57a-e7617a9ee857",
+      "name": "Post Blog To Wordpress",
+      "credentials": {
+        "wordpressApi": {
+          "id": "xcn8ReMEOqIw7qwk",
+          "name": "Wordpress account Virion"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://virion.vn/wp-json/wp/v2/posts/{{ $json.id}}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "wordpressApi",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "featured_media",
+              "value": "={{ $('Update Meta Data').item.json.id }}"
+            },
+            {
+              "name": "excerpt",
+              "value": "={{ $('Phân tích thành phần').item.json.output.des }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        940,
+        1600
+      ],
+      "id": "bb8eaf50-e9ab-4c18-a958-28225ce0c3ce",
+      "name": "Set Image + Description",
+      "credentials": {
+        "wordpressApi": {
+          "id": "xcn8ReMEOqIw7qwk",
+          "name": "Wordpress account Virion"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "195ieMMoFk509Dg8g4MBGLYzpw0jNx651o8b4zP23wQ4",
+          "mode": "list",
+          "cachedResultName": "Bản sao của Data test n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/195ieMMoFk509Dg8g4MBGLYzpw0jNx651o8b4zP23wQ4/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1569143008,
+          "mode": "list",
+          "cachedResultName": "test seo",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/195ieMMoFk509Dg8g4MBGLYzpw0jNx651o8b4zP23wQ4/edit#gid=1569143008"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Kiểm tra bài viết tại trang": "={{ $json.linkBaiViet }}",
+            "row_number": "={{ $json.row_number }}",
+            "Trạng thái": "={{ $json.trangThai }}"
+          },
+          "matchingColumns": [
+            "row_number"
+          ],
+          "schema": [
+            {
+              "id": "Người dùng nhập chủ đề",
+              "displayName": "Người dùng nhập chủ đề",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Từ khóa chính",
+              "displayName": "Từ khóa chính",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Ngày đăng",
+              "displayName": "Ngày đăng",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Trạng thái",
+              "displayName": "Trạng thái",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Kiểm tra bài viết tại trang",
+              "displayName": "Kiểm tra bài viết tại trang",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1580,
+        1100
+      ],
+      "id": "82b396ca-c019-4650-81ca-a763af0f6a9b",
+      "name": "Update Plan",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "RT62vkMV5zYwEIvU",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "markdownToHtml",
+        "markdown": "={{ $('Viết content SEO').item.json.output }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.markdown",
+      "typeVersion": 1,
+      "position": [
+        -100,
+        1600
+      ],
+      "id": "8a33f455-a27f-4d0f-a48f-c494da7e58b3",
+      "name": "Markdown"
+    },
+    {
+      "parameters": {
+        "content": "## Chuẩn bị yêu cầu",
+        "height": 820,
+        "width": 1380,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -200,
+        -460
+      ],
+      "typeVersion": 1,
+      "id": "9b5a1fa1-15f3-46b8-a0f7-16ef765dda3c",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "## Nghiên cứu Ouline",
+        "height": 820,
+        "width": 940,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        680,
+        -460
+      ],
+      "typeVersion": 1,
+      "id": "97d65458-8da4-40dd-9f91-882bd191e6ab",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "## Viêt Content SEO",
+        "height": 420,
+        "width": 1260
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -200,
+        360
+      ],
+      "typeVersion": 1,
+      "id": "d3d0a1a9-5f5b-414d-acaa-18285d50a0a4",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "## Tạo hình ảnh",
+        "height": 440,
+        "width": 1260,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -200,
+        780
+      ],
+      "typeVersion": 1,
+      "id": "40131a4e-9777-4316-9cc3-64d1398ea817",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "content": "## Update meta",
+        "height": 280,
+        "width": 640,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -200,
+        1220
+      ],
+      "typeVersion": 1,
+      "id": "036e740e-e8ce-4bc5-8ae7-bd7ccf0847ad",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "height": 280,
+        "width": 620
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        440,
+        1220
+      ],
+      "typeVersion": 1,
+      "id": "a3d003fe-c5a0-45b6-ba00-fba03cef1226",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "content": "## Đăng bài",
+        "height": 280,
+        "width": 640,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -200,
+        1500
+      ],
+      "typeVersion": 1,
+      "id": "18807525-318d-4a56-8a2b-a539f1f56f01",
+      "name": "Sticky Note6"
+    },
+    {
+      "parameters": {
+        "height": 280,
+        "width": 620,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        440,
+        1500
+      ],
+      "typeVersion": 1,
+      "id": "6c499121-eef7-4cc0-b5c2-cacf854df2c2",
+      "name": "Sticky Note7"
+    },
+    {
+      "parameters": {
+        "content": "## Upgrade \n**\nNguyên cứu ý định tìm kiếm, group key : Lấy từ Google sheet. Đưa vào pormt content SEO"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1260,
+        -420
+      ],
+      "typeVersion": 1,
+      "id": "511145e7-5869-4ed8-89e1-ccc94a3c34f8",
+      "name": "Sticky Note8"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-1.5-flash",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        800,
+        -260
+      ],
+      "id": "cf9f7cf6-7f12-42da-a9e1-5a5f6bfca42c",
+      "name": "Google Gemini Chat Model1",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "liF9LQ41TU5GXcpB",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Bạn là một chuyên gia nghiên cứu thị trường và hành vi người tiêu dùng tại Việt Nam. Dựa vào từ khóa sản phẩm: \"{{ $json[\"Từ khóa chính\"] }}\", hãy phân tích đối tượng khách hàng mục tiêu một cách chi tiết và ngắn gọn, trình bày theo định dạng sau:\n\n###[Giới tính: … ]\n###[Tuổi: … ]\n###[Nghề nghiệp: … ]\n###[Mức thu nhập: … ]\n###[Hôn nhân: … ]\n###[Khó khăn của khách hàng: … ]\n###[Khách hàng cần dịch vụ giúp: … ]\n###[Vị trí địa lý: … ]\n\nYêu cầu:\n- Viết bằng tiếng Việt.\n- Mỗi mục viết 1 đoạn văn ngắn, xúc tích nhưng có chiều sâu và thực tế.\n- Không liệt kê kiểu danh sách, hãy viết thành đoạn hoàn chỉnh nhưng vẫn giữ trong cấu trúc `###[Tiêu đề: nội dung...]`.\n- Không thêm tiêu đề khác, không giải thích thêm.\n\nVí dụ định dạng:\n###[Giới tính: Nam (65–75%), Nữ (25–35%), nam là người quyết định cuối cùng trong mua xe.]\n\n→ Hãy tuân thủ đúng định dạng trên.",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        840,
+        -400
+      ],
+      "id": "7030b634-20c8-47d5-bc9f-a8028f2e154c",
+      "name": "Phân tích Persona"
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "87caaf0f-9ce3-474d-9154-1ccf805534ef",
+      "name": "Lặp từng từ khóa1",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 1,
+      "position": [
+        480,
+        -100
+      ]
+    },
+    {
+      "parameters": {
+        "numberInputs": 3
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.1,
+      "position": [
+        -60,
+        180
+      ],
+      "id": "f53c1e43-e74b-4786-affe-e1019cabf46e",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "9ed9a21a-86da-43a5-9737-e6a9af27c35e",
+              "name": "output",
+              "value": "={{ $json.output }}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1120,
+        -120
+      ],
+      "id": "5f1f45e8-5568-4e7f-8aef-a9ae7da9770a",
+      "name": "research_output"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "0d403c23-50b3-494a-b229-1c11649ef944",
+              "name": "persona_output",
+              "value": "={{ $json.output }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        800,
+        160
+      ],
+      "id": "6f765af4-cd46-4d50-b94a-c79d3d1a5ea7",
+      "name": "persona_output"
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{\n  json: {\n    // Dữ liệu từ item 0 (persona)\n    persona_output: items[0].json.persona_output,\n\n    // Dữ liệu từ item 1 (research_output)\n    outline: items[1].json.output.outline,\n    tu_khoa_phu: items[1].json.output.tu_khoa_phu,\n\n    // Dữ liệu từ item 2 (sheet metadata)\n    chu_de: items[2].json[\"Người dùng nhập chủ đề\"],\n    tu_khoa_chinh: items[2].json[\"Từ khóa chính\"],\n    y_dinh_tim_kiem: items[2].json[\"Ý Định tìm kiếm của người dùng\"]\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        180,
+        180
+      ],
+      "id": "04a95ad0-35de-4800-8ac5-0951b0c8593c",
+      "name": "Code"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.1,
+      "position": [
+        1380,
+        920
+      ],
+      "id": "e40deba9-fc38-46cf-8b87-3b77ea577123",
+      "name": "Merge1"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Gộp hai phần tử (bài viết & dòng Google Sheets) thành một object duy nhất\nconst post = items.find(i => i.json.link);\nconst sheet = items.find(i => i.json[\"Từ khóa chính\"]);\n\nreturn [\n  {\n    json: {\n      tuKhoaChinh: sheet?.json[\"Từ khóa chính\"] || '',\n      linkBaiViet: post?.json.link || '',\n      row_number: sheet?.json.row_number || '',\n      trangThai: 'Done'\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1580,
+        920
+      ],
+      "id": "6183b434-7267-4059-859b-d0d888b95b9f",
+      "name": "Code1"
+    },
+    {
+      "parameters": {
+        "content": "Bạn là một chuyên viên Content SEO cho công ty TNHH Truyền Thông Digizone Việt Nam (Digizone).\n\n###[Viết bài tiếng Việt dài tối thiểu 3800 từ về từ khóa chính: {{ $json.tu_khoa_chinh }}. Bài viết phải chuẩn SEO, hướng đến xuất hiện trên Google Discovery và Top Google Search.]\n\n### Đối tượng xem nội dung: {{ $json.persona_output }}\n### Ý định tìm kiếm: {{ $json.y_dinh_tim_kiem }}\n\n#### Cấu trúc tiêu đề & mở bài:\n- Tiêu đề bài viết (Title): chứa từ khóa chính ở đầu, viết hoa chữ cái đầu mỗi từ, độ dài 6–9 từ, mang ý nghĩa đầy đủ (bao gồm định nghĩa, ứng dụng, lợi ích).\n- Mở bài: 2 câu tích cực, thân thiện, có đề cập đến virion.vn và từ khóa LSI. Tránh từ lặp, dùng từ đồng nghĩa tinh tế.\n\n#### Yêu cầu về cấu trúc nội dung:\n- **Áp dụng AIDA**: Gây chú ý → Khơi gợi nhu cầu → Cung cấp giải pháp → Hành động\n- Heading chính dùng **H2** (không lặp từ khóa chính), heading phụ dùng **H3**\n- Mỗi H2 nên có **1 hình minh họa phù hợp** (ghi rõ nội dung hình)\n\n#### Lưu ý phong cách:\n- Không dùng dấu chấm cảm (!), dấu ngoặc kép (“)\n- Không viết giọng văn máy móc. Hãy **giữ ngữ điệu tự nhiên, tích cực, dễ đọc**, tránh công thức cứng nhắc\n- Sử dụng danh xưng là “Virion”\n\n#### Yêu cầu nội dung:\n- Tối ưu onpage, NLP score > 0.5\n- Tích hợp từ khóa mở rộng như:\n  - **Primary keyword**\n  - **Related Keywords**\n  - **Long-tail Keywords**\n  - **Synonyms, Contextual, LSI keywords**\n  - **Salient entities, Related topics**\n- Các từ khóa trên **phải được tự động thêm vào nội dung**, không liệt kê bảng từ\n- Có trích dẫn số liệu chính thống từ Việt Nam & quốc tế (nêu rõ nguồn)\n- Sử dụng bảng so sánh, danh sách 2–3 cột, ví dụ minh họa thực tế\n- Có hướng dẫn chi tiết, từng bước rõ ràng\n- Có Call-To-Action (CTA) mạnh mẽ cuối mỗi phần, dẫn về virion.vn hoặc hotline +84 768 685 959\n- Tối ưu ảnh đại diện, chèn ít nhất 3 ảnh trong bài (ghi chú hoặc prompt sinh ảnh)\n- Mỗi hình minh họa phải có caption ngắn mô tả nội dung liên quan\n\n#### Kết bài:\n- Tóm tắt giải pháp Virion mang lại\n- CTA mạnh (gọi/nhắn virion.vn, hotline, địa chỉ...)\n\n#### Thông tin liên hệ chèn ở cuối:\nShop Thời Trang Xuất Khẩu – Virion  \nSĐT: +84 768 685 959  \nĐịa chỉ: 127 Bàu Cát 2, P12, Q. Tân Bình, Hồ Chí Minh  \nWebsite: virion.vn\n\n---\n\n**Sau phần này, hãy bắt đầu viết bài đầy đủ dựa trên prompt trên, bắt đầu từ mục sau (nếu đang viết tiếp)**:\n### **Bảng so sánh các công cụ hỗ trợ xây dựng và theo dõi external link**\n\n---\n\nNếu bạn cần tôi **viết lại bài mẫu hoặc sinh prompt ảnh minh họa từ nội dung**, cứ yêu cầu nhé."
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -540,
+        420
+      ],
+      "typeVersion": 1,
+      "id": "1577ec6f-1f7f-4c0b-91a8-ec3ee9717e0a",
+      "name": "Sticky Note9"
+    },
+    {
+      "parameters": {
+        "content": "Bạn là một chuyên viên Content SEO cho công ty TNHH Truyền Thông Digizone Việt Nam (tên gọi khác là Digizone Việt Nam Hoặc ngắn gọn hơn là Digizone).\n\n###[Hãy Viết một bài viết dài ít nhất 3800 từ tiếng Việt về từ khóa chính {{ $json.tu_khoa_chinh }} được tối ưu hóa cho SEO nhằm mục đích xuất hiện nổi bật trên Google Discovery và đứng đầu kết quả tìm kiếm của Google. Đồng thời đáp ứng tất cả các tiêu chí bên dưới:]\n\nĐối tượng chính xem Nội dung này:\n{{ $json.persona_output }}\n###[Ý định tìm kiếm của người dùng:\n{{ $json.y_dinh_tim_kiem }}\nDùng thẻ H2 cho các phần chính, H3 cho phụ.\n\n###[Hãy viết một tiêu đề bài viết chuẩn SEO, có độ dài từ 6 đến 9 từ, với từ khóa chính và phải đặt ở đầu tiêu đề. Tiêu đề phải viết hoa chữ cái đầu của mỗi từ, thể hiện đúng và đầy đủ ngữ cảnh tìm kiếm của người dùng khi search từ khóa này, bao gồm cả định nghĩa, ứng dụng và lợi ích của nó]\n\n###[Viết 1 đoạn mở bài 2 câu cho bài viết về  từ khóa chính,  đề cập đến “virion.vn”. Câu đầu tiên phải bắt đầu bằng từ khóa chính và bao gồm các từ khóa ngữ nghĩa liên quan.  Sử dụng ngôn ngữ tích cực, thân thiện, không dùng tiếng Anh.  Đưa ra giải pháp.  Đoạn cuối mở bài thêm 2-3 từ khóa LSI.  Sử dụng từ đồng nghĩa với từ khóa chính.]\n\nLưu ý:\n###[Nội dung sản xuất tập trung vào đối tượng: {{ $json.persona_output }}]\n###[Nội dung khơi gợi mong muốn được tư vấn giải quyết thắc mắc về nhu cầu ở {{ $json.y_dinh_tim_kiem }} ]\n###[Cả nội dung bài viết được triển khai theo cấu trúc AIDA, không cần phải để giải thích]\n\nMục đích của Bài Viết:\n###[Được đối tượng chia sẻ, lưu lại, ghim bài]\n###[Bấm nút liên hệ để tư vấn theo nhu cầu đã phân tích ]\n###[Khơi gợi khao khát được tư vấn, xử lý ngay thắc mắc của họ]\n###[Tuyệt đối Không sử dụng dấu  chấm cảm (!) và dấu ngoặc kép (\") trong nội dung văn bản]\n\nYêu cầu trong bài Viết:\n###[Nội dung bài viết phải có trích dẫn nghiên cứu khoa học, thông tin chính thống từ nguồn uy tín ở Việt Nam và thế giới]\n###[Hướng dẫn chi tiết rõ ràng từng bước, có số liệu cụ thể]\n###[Sử dụng danh xưng là Virion]\n###[Bài viết phải khéo léo diễn tả các ưu điểm nổi bât cũng như PR giới thiệu cho Virion]\n\n###[Dựa vào phần nội dung “Khó khăn của khách hàng” & “Khách hàng cần dịch vụ/sản phẩm”. Bạn tạo ra kêu gọi hành động (CTA) khiến khách hàng liên hệ được tư vấn/mua hàng tại web của “virion.vn” hoặc với Hotline: +84 768 685 959]\n\n###[Sử dụng các thông tin liên hệ sau trong bài viết, trình bày xuống dòng đẹp mắt: Shop Thời Trang Xuất Khẩu - Virion. SĐT: +84 768 685 959, Địa chỉ: 127 Bàu Cát 2, P12, Q. Tân Bình, Hồ Chí Minh. Website:Virion.vn]\n\nTriển khai bài viết\n\n###[Bài viết được triển khai với từ khóa chính là \"{{ $json.tu_khoa_chinh }}\" dài ít nhất 3800 chữ.  Nội dung cung cấp phải đáp ứng 100% các ý định tìm kiếm (Search intents) của người dùng được đề cập ở trên]\n\n###[Bạn chắc chắn phải viết các đoạn văn theo cách tích cực, yêu đời và đạt điểm Toàn bộ tài liệu của google NLP nhưng vẫn giữ nguyên ý nghĩa của nó, Tối thiểu phải lớn hơn 0,5]\n###[Tập trung vào việc sử dụng ngôn ngữ và cấu trúc câu tích cực trong khi vẫn truyền tải thông tin chính xác.]\n###[Thay vì nhấn mạnh vào hình phạt và hậu quả tiêu cực, hãy tập trung vào lợi ích của việc tuân thủ luật pháp và duy trì phạm vi bảo hiểm đầy đủ.]\n###[Cho phép linh hoạt trong việc lựa chọn các từ đồng nghĩa phù hợp nhất với ngữ cảnh và gợi lên cảm xúc tích cực, thay vì bắt buộc sử dụng chúng một cách nghiêm ngặt.]\n###[Tiêu đề 2 dài tối đa 250 từ, Tiêu đề 3 dài tối đa 180 từ]\n###[Các tiêu đề không nhất thiết phải được đánh số thứ tự nhưng phải rõ ràng và được bôi đậm, tức không phải dạng liệt kê ]\n###[Bài viết phải tuân thủ các tiêu chuẩn E-E-A-T (Kinh nghiệm, Chuyên môn, Quyền hạn và Độ tin cậy) và YMYL (Tiền bạc hoặc Cuộc sống của bạn) và được tối ưu hóa Onpage]\n###[Ưu tiên sử dụng định dạng bảng và danh sách tối đa 3 cột]\n###[Các bài viết xuất hiện trên Google Discovery, do đó nó phải được tối ưu hóa một cách chuyên nghiệp để thu hút sự chú ý của người đọc và đáp ứng các nguyên tắc của Google]\n\n###[Sử dụng các thuật ngữ chuyên ngành một cách chính xác, nhưng cần giải thích rõ ràng để người đọc dễ hiểu]\n###[Sử dụng các số liệu thống kê, biểu đồ để minh họa cho những phân tích của bạn]\n###[Cập nhật thông tin mới nhất có thể là giá, diện tích, khối lượng, số lượng,... (chi tiết rõ ràng) và lập bảng cho nội dung sản xuất]\n\n###[Dựa trên từ khóa chính là \"{{ $json.tu_khoa_chinh }}\" hãy tự động thống kê ra thêm các từ khóa ở mỗi nhóm theo liệt kê, mỗi nhóm ít nhất 5 từ: Từ khóa chính (Primary Keyword), Từ khóa liên quan (Related Keywords), Từ khóa dài (Long-tail Keywords), Từ khóa đồng nghĩa (Synonyms), Từ khóa ngữ cảnh (Contextual Keywords), Từ khóa LSI (Salient LSI keywords), Thực thể LSI (Semantic LSI entities), Thực thể nổi bật (Salient entities), Chủ đề liên quan đến từ khóa chính (Related topics), Thuộc tính gốc ( Root attributes), Thuộc tính hiếm (Rare attributes), Đặc điểm độc đáo (Unique characteristics). Và sau đó thêm tất cả các từ khóa này vào nội dung bài viết không cần liệt kê ra]\n\nTôi sẽ gọi Prompt này là \"PR1\"\n###[Sử dụng toàn bộ yêu cầu ở Prompt \"PR1\", Tiếp tục sản xuất nội dung của bài viết cho đến hết, bắt đầu tiếp từ phần:Bảng so sánh các công cụ hỗ trợ xây dựng và theo dõi externa link]\n###[Không sử dụng dấu ngoặc kép (“) trong nội dung tạo ra]"
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -540,
+        600
+      ],
+      "typeVersion": 1,
+      "id": "e9a43983-18ed-49b9-b37a-e7028f6d6e5e",
+      "name": "Sticky Note10"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  item.json.data = item.json.data.replace(/<h[1-6]\\s+id=\"[^\"]+\"/g, match => {\n    return match.replace(/ id=\"[^\"]+\"/, '');\n  });\n  return item;\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        100,
+        1600
+      ],
+      "id": "b4111cec-a471-4ca8-b021-7d415e4939e6",
+      "name": "Code2"
+    },
+    {
+      "parameters": {
+        "height": 1420,
+        "width": 540
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1060,
+        360
+      ],
+      "typeVersion": 1,
+      "id": "19a090e0-052d-418d-812a-26d0294cf536",
+      "name": "Sticky Note11"
+    },
+    {
+      "parameters": {
+        "amount": 1,
+        "unit": "minutes"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        300,
+        460
+      ],
+      "id": "78cd40c7-7725-4b19-b076-d58b76f2092c",
+      "name": "Wait",
+      "webhookId": "ccb7126e-5067-4235-808b-a69049d7eea4"
+    },
+    {
+      "parameters": {
+        "amount": 1,
+        "unit": "minutes"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1260,
+        460
+      ],
+      "id": "db1e0251-3197-4e22-a8b3-76e9f10ba299",
+      "name": "Wait1",
+      "webhookId": "6522dc53-912b-4233-a822-61fea5538e8e"
+    },
+    {
+      "parameters": {
+        "amount": 30
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        340,
+        880
+      ],
+      "id": "acc10f39-f4d6-4b0d-8a07-9ea70f578c22",
+      "name": "Wait2",
+      "webhookId": "7ff7747d-ca7b-4691-8daf-6890d08249e6"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Chuẩn hóa prompt và tên ảnh từ object output\nreturn [{\n  json: {\n    prompt_img: $json.output?.prompt_img?.toString().trim() ?? 'Generate a simple image of product',\n    name_img: $json.output?.name_img ?? 'virion_image'\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        560,
+        880
+      ],
+      "id": "dd22d01a-18a4-40ce-9d78-e755c33cc187",
+      "name": "Code3"
+    }
+  ],
+  "pinData": {
+    "Schedule Trigger": [
+      {
+        "json": {
+          "timestamp": "2025-07-14T08:00:03.027+07:00",
+          "Readable date": "July 14th 2025, 8:00:03 am",
+          "Readable time": "8:00:03 am",
+          "Day of week": "Monday",
+          "Year": "2025",
+          "Month": "July",
+          "Day of month": "14",
+          "Hour": "08",
+          "Minute": "00",
+          "Second": "03",
+          "Timezone": "Asia/Ho_Chi_Minh (UTC+07:00)"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-07-06T08:44:20.364Z",
+      "updatedAt": "2025-07-06T08:44:20.364Z",
+      "role": "workflow:owner",
+      "workflowId": "ngtuS5ryO7udS26h",
+      "projectId": "quf7HR2xEtUzOS9Z"
+    }
+  ],
+  "staticData": {
+    "node:Schedule Trigger": {
+      "recurrenceRules": []
+    }
+  },
+  "tags": [
+    {
+      "createdAt": "2025-04-24T13:43:06.362Z",
+      "updatedAt": "2025-04-24T13:43:06.362Z",
+      "id": "XnUs0jT6KXaVOBFV",
+      "name": "seo"
+    },
+    {
+      "createdAt": "2025-04-24T13:43:06.379Z",
+      "updatedAt": "2025-04-24T13:43:06.379Z",
+      "id": "uvBK77aNIM2CyB5i",
+      "name": "content"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2025-07-22T09:51:22.000Z",
+  "versionId": "e5f1112c-23d5-4723-928e-9f3d5443175b"
+}
