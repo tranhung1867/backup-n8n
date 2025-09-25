@@ -1,0 +1,1527 @@
+{
+  "active": false,
+  "connections": {
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Crawl Link1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Last1": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Crawl Link1": {
+      "main": [
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Cào Link Video1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "Check Last1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gemini - Generate Upload URL": {
+      "main": [
+        [
+          {
+            "node": "Download File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download File": {
+      "main": [
+        [
+          {
+            "node": "Gemini - Upload File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gemini - Upload File": {
+      "main": [
+        [
+          {
+            "node": "Save Values",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Values": {
+      "main": [
+        [
+          {
+            "node": "Wait3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait3": {
+      "main": [
+        [
+          {
+            "node": "Gemini - Ask Questions",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cào Link Video1": {
+      "main": [
+        [
+          {
+            "node": "Gemini - Generate Upload URL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser1": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Grok Copy Writing AI  KB1",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Match dạng kịch bản và prompt mẫu": {
+      "ai_tool": [
+        [
+          {
+            "node": "Grok Copy Writing AI  KB1",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "perplexity": {
+      "ai_tool": [
+        [
+          {
+            "node": "Grok Copy Writing AI  KB1",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Grok Copy Writing AI  KB1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Grok Copy Writing AI  KB1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "Wait2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait2": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request4": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request5": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tải video lên Blotato": {
+      "main": [
+        [
+          {
+            "node": "[Instagram] Đăng bài qua Blotato",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "[Facebook] Đăng bài qua Blotato",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "[LinkedIn] Đăng bài qua Blotato",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "[TikTok]",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Tạo ảnh bằng OpenAI",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "[YouTube] Đăng bài qua Blotato",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "[Threads] Đăng bài qua Blotato",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "[Twitter] Đăng bài qua Blotato",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "[Bluesky] Đăng bài qua Blotato",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tạo ảnh bằng OpenAI": {
+      "main": [
+        [
+          {
+            "node": "Tải ảnh lên Blotato",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tải ảnh lên Blotato": {
+      "main": [
+        [
+          {
+            "node": "[Pinterest] Đăng bài qua Blotato",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Chuẩn bị nội dung đăng": {
+      "main": [
+        [
+          {
+            "node": "Tải video lên Blotato",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request3": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-08-19T18:42:35.021Z",
+  "id": "fOJR2bsdr1A1lADE",
+  "isArchived": false,
+  "meta": null,
+  "name": "ai clone",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 10
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -3024,
+        208
+      ],
+      "id": "67a55a31-02fa-465b-9b02-b3e224edb227",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "content": "https://clickai.vn/threads/4434e0bd-6d04-49c3-aac4-aa509992e93e?community-tab=threads&communityId=06d718fa-f76c-41a4-a53d-6085ebb15b2a\n\n# 🚀 Đăng Lên Các Trang Mạng Xã Hội\n\n## 🔗 Bước 1: Đăng ký tài khoản Blotato  \n👉 [Sign up for Blotato tại đây](https://blotato.com/?ref=MCBAIVN)\n\n---\n\n## ⚠️ Lưu ý về API hiện tại của Blotato\n\n❌ **Blotato hiện chưa hỗ trợ upload video lên:**\n\n- Bluesky  \n- Pinterest  \n\n⏳ **Tính năng này sẽ được cập nhật trong tương lai.**\n\n🛑 Vì vậy, **các node tương ứng đã được tắt tạm thời.**\n",
+        "height": 480,
+        "width": 660,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -960,
+        240
+      ],
+      "id": "9cdbe416-5dfd-425d-8307-d4e5b7ff6366",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "jsCode": "let rawHTML = $json.data; // Lấy dữ liệu HTML từ Make hoặc backend\n\n// Tìm JSON chứa \"webapp.video-detail\"\nlet jsonMatch = rawHTML.match(/\"webapp.video-detail\":\\s*({.*?})\\s*,\"webapp./s);\n\nif (jsonMatch) {\n    try {\n        let jsonStr = `{\"webapp.video-detail\": ${jsonMatch[1]}}`; // Định dạng JSON hợp lệ\n        console.log(\"Extracted JSON String:\", jsonStr); // Debug JSON\n\n        // Kiểm tra JSON trước khi parse\n        if (!jsonStr.startsWith(\"{\") || !jsonStr.endsWith(\"}\")) {\n            throw new Error(\"JSON không hợp lệ, thiếu dấu { hoặc }\");\n        }\n\n        let jsonData = JSON.parse(jsonStr);\n\n        // Trích xuất ID video\n        let videoId = jsonData[\"webapp.video-detail\"].itemInfo.itemStruct.id;\n\n        // Trích xuất Unique ID (username)\n        let uniqueId = jsonData[\"webapp.video-detail\"].itemInfo.itemStruct.author.uniqueId;\n\n        console.log(\"Video ID:\", videoId);\n        console.log(\"Unique ID:\", uniqueId);\n\n        // ✅ Trả về cả ID và Unique ID\n        return [{ id: videoId, uniqueId: uniqueId }];\n    } catch (e) {\n        console.error(\"Lỗi JSON:\", e.message);\n        return [{ error: \"Lỗi JSON: \" + e.message }];\n    }\n} else {\n    console.log(\"Không tìm thấy dữ liệu video.\");\n    return [{ error: \"Không tìm thấy dữ liệu video.\" }];\n}\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 1,
+      "position": [
+        -2368,
+        208
+      ],
+      "id": "dadc3a15-f71e-4f15-85fe-009b726c5257",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "url": "https://api.apify.com/v2/acts/clockworks~tiktok-video-scraper/runs/last",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1696,
+        208
+      ],
+      "id": "eb04c88c-115c-4929-a5f0-8607f8f64bf5",
+      "name": "Check Last1"
+    },
+    {
+      "parameters": {
+        "url": "=https://api.apify.com/v2/datasets/{{ $json.data.defaultDatasetId }}/items",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "format",
+              "value": "json"
+            },
+            {
+              "name": "clean",
+              "value": "true"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -3008,
+        384
+      ],
+      "id": "e51c4621-e82b-4a4b-a0ce-28e422b9d596",
+      "name": "Cào Link Video1",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.apify.com/v2/acts/clockworks~tiktok-video-scraper/runs",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"postURLs\": [\n        \"https://www.tiktok.com/@{{ $json.uniqueId }}/video/{{ $json.id }}\"\n    ],\n    \"shouldDownloadCovers\": false,\n    \"shouldDownloadSlideshowImages\": true,\n    \"shouldDownloadSubtitles\": false,\n    \"shouldDownloadVideos\": true\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2160,
+        208
+      ],
+      "id": "0efdf62c-5285-4e8b-8ddb-b17195aa82ef",
+      "name": "Crawl Link1",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "4F6TT0dmH71fZ60l",
+          "name": "PDF Acc"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "acd5a7c1-1506-4b3f-b455-42e45ebd44b5",
+              "leftValue": "={{ $json.data.status }}",
+              "rightValue": "SUCCEEDED",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -1408,
+        192
+      ],
+      "id": "a764d2c7-9820-4a8e-bd66-ab6707482645",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "amount": 13
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -1920,
+        208
+      ],
+      "id": "29b612b5-6dcc-4c06-99d0-81787ad8c54a",
+      "name": "Wait1",
+      "webhookId": "b370f5a9-6a33-49c7-85cf-23d72f21873a"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.Link }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36"
+            }
+          ]
+        },
+        "options": {
+          "redirect": {
+            "redirect": {}
+          },
+          "response": {
+            "response": {
+              "responseFormat": "text"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2608,
+        208
+      ],
+      "id": "24d329a5-57af-4e2f-9f92-058c64282a71",
+      "name": "HTTP Request1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/upload/v1beta/files",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "key"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Goog-Upload-Protocol",
+              "value": "resumable"
+            },
+            {
+              "name": "X-Goog-Upload-Command",
+              "value": "start"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n\"file\": {\n\"display_name\": \"{{ $json.createTime }}1\"\n}\n}",
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          }
+        }
+      },
+      "id": "fa9ba3d0-457b-48b7-842d-0effa7d5a47e",
+      "name": "Gemini - Generate Upload URL",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -2736,
+        384
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Cào Link Video1').item.json.mediaUrls[0] }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "id": "4320eb42-d113-440a-91d1-f609983041e8",
+      "name": "Download File",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -2528,
+        384
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $('Gemini - Generate Upload URL').item.json.headers['x-goog-upload-url'] }}",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "key"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Goog-Upload-Offset",
+              "value": "0"
+            },
+            {
+              "name": "X-Goog-Upload-Command",
+              "value": "upload, finalize"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "binaryData",
+        "inputDataFieldName": "data",
+        "options": {
+          "response": {}
+        }
+      },
+      "id": "b34a7a6c-db12-4c85-b47f-4f49edd879d7",
+      "name": "Gemini - Upload File",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -2320,
+        384
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "key"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"contents\": [\n    {\n      \"parts\": [\n        {\n          \"text\": \"Hãy lấy cho tội Transcript của video và vui lòng trả về transcript không trả lời hay giải thích gì thêm, chỉ trả về lời thoại của nhân vật trong video thôi \"\n        },\n        {\n          \"file_data\": {\n            \"mime_type\": \"{{ $('Save Values').item.json.mimeType }}\",\n            \"file_uri\": \"{{ $('Save Values').item.json.gemini_file_url }}\"\n          }\n        }\n      ]\n    }\n  ]\n}\n",
+        "options": {
+          "response": {}
+        }
+      },
+      "id": "32182913-ac60-40ac-b6d4-6021be21b432",
+      "name": "Gemini - Ask Questions",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -1680,
+        384
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4fb7b732-17f9-41a2-986d-5d62b1331242",
+              "name": "gemini_file_url",
+              "type": "string",
+              "value": "={{ $json.file.uri }}"
+            },
+            {
+              "id": "5f3018b4-571f-433c-a07b-2fb86f63b9b6",
+              "name": "mimeType",
+              "type": "string",
+              "value": "={{ $json.file.mimeType }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2d2c032f-045a-443e-8ce3-d1f40d1b383a",
+      "name": "Save Values",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -2096,
+        384
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "amount": 30
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -1888,
+        384
+      ],
+      "id": "b3bce67e-402e-4829-a7e7-2169d0166b57",
+      "name": "Wait3",
+      "webhookId": "e2edb26d-7692-4571-a7ef-4fa3fd8943d7"
+    },
+    {
+      "parameters": {},
+      "type": "@watzon/n8n-nodes-perplexity.perplexity",
+      "typeVersion": 1,
+      "position": [
+        -3008,
+        624
+      ],
+      "id": "49d1f955-c2fd-48cd-bd25-29f46270890e",
+      "name": "Perplexity",
+      "credentials": {}
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"Grok\": {\n    \"intro\": \"Phần mở đầu (10-15 giây), giới thiệu vấn đề, tình huống bất ngờ hoặc câu hỏi tương tác để lôi kéo khán giả vào nội dung chính.\",\n    \"main_content\": \"có thể là Điểm chính/mẹo đầu tiên: ngắn gọn và dễ hiểu. Ví dụ: một tình huống sống động, gần gũi, có thể kèm một twist bất ngờ để gây ấn tượng. Tiếp theo, nhấn mạnh giá trị độc đáo của công cụ/mẹo này. Chia sẻ một ví dụ thực tế hoặc cá nhân (chẳng hạn như thất bại hài hước, thành công bất ngờ) để tạo sự đồng cảm. Cuối cùng, nhấn mạnh lợi ích thực tế hoặc tiềm năng sáng tạo. Đưa ra một ví dụ cụ thể, dễ áp dụng, khơi gợi sự tò mò và thúc đẩy khán giả muốn thử ngay. \",\n    \"conclusion\": \"Phần kết luận ngắn gọn (5-10 giây), tóm tắt giá trị cốt lõi bằng một câu sắc bén, đầy cảm hứng, để lại dư âm mạnh.\",\n    \"cta\": \"Lời kêu gọi hành động (5-10 giây), khẩn cấp, sáng tạo và vui vẻ (ví dụ: ‘Thử ngay đi, đừng để tụi khác làm trước!’), khuyến khích tương tác (thích, chia sẻ, thử công cụ) và kết thúc bằng câu tagline ‘Tin mình đi, AI sẽ biến giấc mơ của chúng ta thành sự thật!’ một cách tự nhiên, mạnh mẽ.\",\n    \"hashtags\": \"Hashtag liên quan đến chủ đề chính, Hashtag để tăng khả năng lan tỏa, Hashtag phù hợp với xu hướng hiện tại\",\n    \"caption\": \"Caption ngắn gọn (dưới 50 từ), gây sốc hoặc hài hước, chứa chi tiết nổi bật nhất để lôi kéo người xem nhấp vào video ngay.\",\n    \"notes\": \"Những điều cần lưu ý cho kịch bản video\",\n    \"Name Script:\": \" Tên ngắn cho kịch bản này khoảng 4 đến 5 từ tóm gọn nội dung chính của kịch bản, nếu có tên của công cụ thì hãy đưa ra tên công cụ kèm kịch bản : têm cppmg cụ \",\n    \"Dạng kịch bản\" : \" Tên dạng kịch bản đã được chọn từ Google Sheet bắt buộc phải có.\"\n  }\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        -2528,
+        800
+      ],
+      "id": "c8c115b1-1a1a-4aa8-9f64-5a2429faad82",
+      "name": "Structured Output Parser1"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Transcript hoặc mô tả về video ban đầu :{{ $('Gemini - Ask Questions').item.json.candidates[0].content.parts[0].text }}\n\nThông tin thêm nếu có : {{ $json.choices[0].message.content }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=Bạn là một AI chuyên tạo kịch bản video ngắn (60-90 giây) chuyên nghiệp.\n\n### **Bước 1: Hiểu nội dung đầu vào**\nBạn sẽ nhận được một nội dung đầu vào, có thể là transcript, ý tưởng hoặc thông tin liên quan đến AI.  \nHãy **đọc và phân tích kỹ nội dung này** để xác định chủ đề chính.\n\n### **Bước 2: Tìm dạng kịch bản phù hợp nhất trong Google Sheet**\n- Truy cập Google Sheet chứa danh sách các **dạng kịch bản** và **prompt tương ứng**.\n- So sánh nội dung đầu vào với danh sách trong **cột A** để xác định **dạng kịch bản phù hợp nhất**.\n- **Bắt buộc** phải điền tên dạng kịch bản vào trường `\"Dạng kịch bản\"` trong JSON.\n- Nếu không tìm thấy dạng kịch bản hoàn toàn khớp, hãy chọn dạng gần nhất và điều chỉnh hợp lý.\n\n### **Bước 3: Lựa chọn prompt tương ứng**\n- Khi đã xác định được dạng kịch bản, hãy **lấy prompt tương ứng** từ Google Sheet.\n- **Không tự sáng tạo prompt mới**, chỉ chọn đúng prompt phù hợp với dạng kịch bản đã chọn.\n\n### **Bước 4: Tạo kịch bản hoàn chỉnh**\n- **Kết hợp prompt đã chọn + nội dung đầu vào** để tạo ra một kịch bản video **chất lượng cao, hấp dẫn, dễ hiểu, có cấu trúc rõ ràng**.\n- **Bám sát cấu trúc thông thường của một kịch bản video**: Hook mở đầu, Nội dung chính, Cú chốt hạ, Call-to-action.\n- Follow theo transcript sẵn có chỉ bổ sung thêm thông tin nếu cần theiest\n### **Bước 5: Tìm kiếm các câu nói và từ ngữ hottrend tại perplexity **\n- **Xem có từ ngữ nào phù hợp với Video không nếu có thì hãy thêm thắt những từ ngữ hottrend vào để làm cho kịch bản hấp dẫn hơn**.\n### **Bước 6: Xuất nội dung theo JSON chuẩn**\nHãy **kết hợp nội dung đầu vào với prompt đã chọn** để tạo ra một kịch bản video **theo đúng cấu trúc JSON sau**.  \nLưu ý: **\"Dạng kịch bản\" là bắt buộc, không được để trống.**\n\n{\n  \"Grok\": {\n    \"intro\": \"[Viết phần mở đầu (10-15 giây) dựa trên prompt và nội dung đầu vào. Đây phải là một câu hỏi sốc, tình huống bất ngờ hoặc một tuyên bố gây tò mò.]\",\n    \"main_content\": \"có thể là Điểm chính/mẹo đầu tiên: ngắn gọn và dễ hiểu. Ví dụ: một tình huống sống động, gần gũi, có thể kèm một twist bất ngờ để gây ấn tượng. Tiếp theo, nhấn mạnh giá trị độc đáo của công cụ/mẹo này. Chia sẻ một ví dụ thực tế hoặc cá nhân (chẳng hạn như thất bại hài hước, thành công bất ngờ) để tạo sự đồng cảm. Cuối cùng, nhấn mạnh lợi ích thực tế hoặc tiềm năng sáng tạo. Đưa ra một ví dụ cụ thể, dễ áp dụng, khơi gợi sự tò mò và thúc đẩy khán giả muốn thử ngay.\",\n    \"conclusion\": \"[Viết phần kết (5-10 giây), chốt hạ mạnh mẽ, nhấn mạnh giá trị cốt lõi.]\",\n    \"cta\": \"[Viết lời kêu gọi hành động (5-10 giây) khuyến khích khán giả tương tác, thử ngay hoặc chia sẻ video.]\",\n    \"hashtags\": \"[Tạo danh sách hashtag phù hợp với nội dung và xu hướng hiện tại.]\",\n    \"caption\": \"[Viết caption hấp dẫn, ngắn gọn (dưới 50 từ) giúp thu hút người xem click vào video.]\",\n    \"notes\": \"[Bổ sung bất kỳ lưu ý nào cần thiết để cải thiện kịch bản hoặc giúp video hấp dẫn hơn.]\",\n    \"Name Script\": \"[Tạo tên ngắn gọn cho kịch bản (4-5 từ) tóm tắt nội dung chính.]\",\n    \"Dạng kịch bản\": \"[Tên dạng kịch bản đã được chọn từ Google Sheet bắt buộc phải có.]\"\n  }\n}\n\n### **Lưu ý quan trọng:**\n- **Không tự tạo prompt mới** – chỉ sử dụng prompt đã có trong Google Sheet.\n- **Đảm bảo kịch bản có cấu trúc rõ ràng** theo JSON format trên.\n- **Dạng kịch bản phải khớp chính xác với nội dung đầu vào**.\n- **Nếu nội dung không khớp 100% với bất kỳ dạng nào, hãy chọn dạng gần nhất và điều chỉnh hợp lý.**\n- **Nội dung đầu ra luôn là tiếng Việt, ngoại trừ tên công cụ hoặc thuật ngữ kỹ thuật.**\n- **Nếu không tìm thấy dạng kịch bản, phải trả về lỗi: 'Không tìm thấy dạng kịch bản phù hợp trong Google Sheet'.**\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        -2816,
+        624
+      ],
+      "id": "7614ef2b-f73e-4f13-9aec-2b1841297b5e",
+      "name": "Grok Copy Writing AI  KB1",
+      "retryOnFail": true,
+      "maxTries": 3
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "11Mf9kD6eD45BfQfu7bkiOJUG_BX1qHF-KZNsrUP4b6g",
+          "mode": "list",
+          "cachedResultName": "Insta- FB Reel , Tiktok,Youtube Script Auto",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/11Mf9kD6eD45BfQfu7bkiOJUG_BX1qHF-KZNsrUP4b6g/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1020262564,
+          "mode": "list",
+          "cachedResultName": "Kịch Bản Mẫu",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/11Mf9kD6eD45BfQfu7bkiOJUG_BX1qHF-KZNsrUP4b6g/edit#gid=1020262564"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.5,
+      "position": [
+        -2688,
+        800
+      ],
+      "id": "01dd8064-4510-4a3e-a4b9-43d582944095",
+      "name": "Match dạng kịch bản và prompt mẫu"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Tìm kiếm những từ ngữ và câu nói hottrend của giới trẻ việt nam 2024,2025",
+        "method": "POST",
+        "url": "https://api.perplexity.ai/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"sonar-pro\",\n  \"frequency_penalty\": 0.5,\n  \"max_tokens\": 1024,\n  \"presence_penalty\": 0.0,\n  \"temperature\": 0.5,\n  \"return_images\": false,\n  \"return_related_questions\": false,\n  \"search_recency_filter\": \"month\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"Bạn là một chuyên gia Content Researcher với hơn 10 năm kinh nghiệm trong lĩnh vực sáng tạo nội dung. Bạn am hiểu sâu sắc về tâm lý người đọc, biết cách khơi gợi cảm xúc, xây dựng thông điệp tự nhiên, cuốn hút, nội dung tôi cung cấp. Nhiệm vụ của bạn là nghiên cứu, khai thác thông tin đầu vào một cách hiệu quả và phát triển nội dung tiền đề – sẵn sàng để chuyển hóa thành một caption ấn tượng, dễ chạm đến trái tim người đọc.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Tìm kiếm những từ ngữ và câu nói hottrend của giới trẻ việt nam 2025\"\n    }\n  ]\n}\n"
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [
+        -2816,
+        832
+      ],
+      "id": "96bd3ece-8c70-4b37-8f23-80cb31349dc9",
+      "name": "perplexity"
+    },
+    {
+      "parameters": {
+        "model": "x-ai/grok-2-1212",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        -2944,
+        800
+      ],
+      "id": "79b4ab73-5288-4c26-ba2e-234feaa3734e",
+      "name": "OpenRouter Chat Model"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "fd956f39-60a5-4cd3-a617-e65bc23eb85b",
+              "name": "Kịch bản",
+              "value": "={{ $json.output.Grok.intro }}{{ $json.output.Grok.main_content }}{{ $json.output.Grok.conclusion }}{{ $json.output.Grok.cta }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -2368,
+        624
+      ],
+      "id": "f1c79522-9d62-4798-a2c1-030ce2e5d328",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -2800,
+        208
+      ],
+      "id": "bc47db03-1c9c-4967-ba04-65d5bb442721",
+      "name": "Google Sheets"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.heygen.com/v2/video/generate",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Api-Key"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"video_inputs\": [\n    {\n      \"character\": {\n        \"type\": \"avatar\",\n        \"avatar_id\": \"\",\n        \"avatar_style\": \"normal\"\n      },\n      \"voice\": {\n        \"type\": \"audio\",\n        \"audio_asset_id\": \"{{ $json.data.id }}\"\n      }\n    }\n  ],\n  \"dimension\": {\n    \"width\": 1280,\n    \"height\": 720\n  }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2336,
+        1072
+      ],
+      "id": "8f0278f1-8b22-4741-9724-5995a4d5f97e",
+      "name": "HTTP Request2"
+    },
+    {
+      "parameters": {
+        "url": "=https://api.heygen.com/v1/video_status.get?video_id={{ $json.data.video_id }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/json"
+            },
+            {
+              "name": "X-Api-Key"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1856,
+        1072
+      ],
+      "id": "91388a03-5ee7-40f5-995b-c053267b9477",
+      "name": "HTTP Request3"
+    },
+    {
+      "parameters": {
+        "amount": 3,
+        "unit": "minutes"
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -2096,
+        1072
+      ],
+      "id": "cf6c7593-ce9d-4c9a-93fb-2230bdae80ff",
+      "name": "Wait2",
+      "webhookId": "fc7cb42e-4abf-4624-b3e2-a7c5b214c084"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.elevenlabs.io/v1/text-to-speech/kEgvTSpxrvE92cwHkpx9",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "output_format",
+              "value": "mp3_44100_128"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "xi-api-key"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"text\": \"{{ $json['Kịch bản'] }}\",\n  \"model_id\": \"eleven_flash_v2_5\",\n  \"voice_settings\": {\n    \"stability\": 0.7,\n    \"similarity_boost\": 0.75\n  }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2944,
+        1072
+      ],
+      "id": "9d24a112-e343-4563-9498-8d352b0b0495",
+      "name": "HTTP Request4"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://upload.heygen.com/v1/asset",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Api-Key"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "binaryData",
+        "inputDataFieldName": "data",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -2640,
+        1072
+      ],
+      "id": "615eb318-6ada-47d4-95d9-09d7b9a8d7ee",
+      "name": "HTTP Request5"
+    },
+    {
+      "parameters": {
+        "content": "# 📋 Sao chép ý tưởng và lấy kịch bản",
+        "height": 260,
+        "width": 180
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -3328,
+        224
+      ],
+      "id": "e2f39c4d-8ca6-495f-8d95-995febc67252",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "# 🧠 Research và tạo kịch bản hoàn chỉnh",
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -3344,
+        608
+      ],
+      "id": "e8bff47f-9000-42e8-9007-81a9913df99a",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "# Tạo voice 🔈, Tạo video 🎞️",
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -3360,
+        1024
+      ],
+      "id": "8a0ff08b-a1ec-4637-a3e4-53755bc0bd9f",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -1648,
+        1072
+      ],
+      "id": "54443100-71a0-48dd-a38f-1ab24e6a0a5a",
+      "name": "Google Sheets1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "38P5AQchG6NSZWlG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 10
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -1168,
+        800
+      ],
+      "id": "0cd0a1b9-92d8-4ec6-adf6-3975e5e4132c",
+      "name": "Schedule Trigger1"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        -768,
+        800
+      ],
+      "id": "61d0207e-9480-4ab0-8a52-eb88e6dd37b8",
+      "name": "Google Sheets2"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.blotato.com/v2/media",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "blotato-api-key",
+              "value": "={{ $('Chuẩn bị nội dung đăng').item.json.blotato_api_key }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "url",
+              "value": "={{ $('Get Avatar Video').item.json.data.video_url }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -240,
+        800
+      ],
+      "id": "431fa402-4de4-4da5-8e85-7723b96c39d5",
+      "name": "Tải video lên Blotato"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.blotato.com/v2/posts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "blotato-api-key",
+              "value": "={{ $('Chuẩn bị nội dung đăng').item.json.blotato_api_key }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"post\": {\n    \"target\": {\n      \"targetType\": \"instagram\"\n    },\n    \"content\": {\n      \"text\": {{ $('Chuẩn bị nội dung đăng').item.json.final_text_long.toJsonString() }},\n      \"platform\": \"instagram\",\n      \"mediaUrls\": [\"{{ $json.url }}\"]\n    },\n    \"accountId\": \"{{ $('Chuẩn bị nội dung đăng').item.json.instagram_id }}\"\n  }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "d16add58-8bc1-4d4c-8c3f-8edb5801eb1c",
+      "name": "[Instagram] Đăng bài qua Blotato",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.blotato.com/v2/posts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "blotato-api-key",
+              "value": "={{ $('Chuẩn bị nội dung đăng').item.json.blotato_api_key }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"post\": {\n    \"target\": {\n      \"targetType\": \"facebook\",\n      \"pageId\": \"{{ $('Chuẩn bị nội dung đăng').item.json.facebook_page_id }}\"\n    },\n    \"content\": {\n      \"text\": {{ $('Chuẩn bị nội dung đăng').item.json.final_text_long.toJsonString() }},\n      \"platform\": \"facebook\",\n      \"mediaUrls\": [\"{{ $json.url }}\"]\n    },\n    \"accountId\": \"{{ $('Chuẩn bị nội dung đăng').item.json.facebook_id }}\"\n  }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        0,
+        352
+      ],
+      "id": "583c7850-286b-468b-a381-2e3992551f28",
+      "name": "[Facebook] Đăng bài qua Blotato"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.blotato.com/v2/posts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "blotato-api-key",
+              "value": "={{ $('Chuẩn bị nội dung đăng').item.json.blotato_api_key }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"post\": {\n    \"target\": {\n      \"targetType\": \"linkedin\"\n    },\n    \"content\": {\n      \"text\": {{ $('Chuẩn bị nội dung đăng').item.json.final_text_long.toJsonString() }},\n      \"platform\": \"linkedin\",\n      \"mediaUrls\": [\"{{ $json.url }}\"]\n    },\n    \"accountId\": \"{{ $('Chuẩn bị nội dung đăng').item.json.linkedin_id }}\"\n  }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        64,
+        800
+      ],
+      "id": "9a90c120-2791-4970-b35e-3704aff1779a",
+      "name": "[LinkedIn] Đăng bài qua Blotato",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.blotato.com/v2/posts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "blotato-api-key",
+              "value": "={{ $('Chuẩn bị nội dung đăng').item.json.blotato_api_key }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"post\": {\n    \"target\": {\n      \"targetType\": \"tiktok\",\n      \"isYourBrand\": false,\n      \"disabledDuet\": false,\n      \"privacyLevel\": \"PUBLIC_TO_EVERYONE\",\n      \"isAiGenerated\": false,\n      \"disabledStitch\": false,\n      \"disabledComments\": false,\n      \"isBrandedContent\": false\n    },\n    \"content\": {\n      \"text\": {{ $('Chuẩn bị nội dung đăng').item.json.final_text_long.toJsonString() }},\n      \"platform\": \"tiktok\",\n      \"mediaUrls\": [\"{{ $json.url }}\"]\n    },\n    \"accountId\": \"{{ $('Chuẩn bị nội dung đăng').item.json.tiktok_id }}\"\n  }\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        0,
+        1200
+      ],
+      "id": "0e88d10b-e385-4fd1-89df-99f02aaf8fe2",
+      "name": "[TikTok]",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "model": "gpt-image-1",
+        "prompt": "={{ $('Chuẩn bị nội dung đăng').item.json.final_text_long }}",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        0,
+        1600
+      ],
+      "id": "bf1b4990-2b9e-4cec-9313-537e9a309d49",
+      "name": "Tạo ảnh bằng OpenAI",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.blotato.com/v2/media",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "blotato-api-key",
+              "value": "={{ $('Chuẩn bị nội dung đăng').item.json.blotato_api_key }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "url",
+              "value": "={{ $json.url }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        240,
+        1600
+      ],
+      "id": "757dd2a7-9244-4fce-ab24-9ee8c88758f8",
+      "name": "Tải ảnh lên Blotato",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.blotato.com/v2/posts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "blotato-api-key",
+              "value": "={{ $('Chuẩn bị nội dung đăng').item.json.blotato_api_key }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"post\": {\n    \"target\": {\n      \"targetType\": \"pinterest\",\n      \"boardId\": \"{{ $('Chuẩn bị nội dung đăng').item.json.pinterest_board_id }}\",\n      \"link\": \"https://www.tiktok.com/@sabrina_ramonov\"\n    },\n    \"content\": {\n      \"text\": {{ $('Chuẩn bị nội dung đăng').item.json.final_text_short.toJsonString() }},,\n      \"platform\": \"pinterest\",\n      \"mediaUrls\": [\"{{ $json.url }}\"]\n    },\n    \"accountId\": \"{{ $('Chuẩn bị nội dung đăng').item.json.pinterest_id }}\"\n  }\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        464,
+        1600
+      ],
+      "id": "b6002c7a-b1b2-4be8-b249-369efeb2d9be",
+      "name": "[Pinterest] Đăng bài qua Blotato",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.blotato.com/v2/posts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "blotato-api-key",
+              "value": "={{ $('Chuẩn bị nội dung đăng').item.json.blotato_api_key }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"post\": {\n    \"target\": {\n      \"targetType\": \"youtube\",\n      \"title\": \"TEST VIDEO\",\n      \"privacyStatus\": \"public\",\n      \"shouldNotifySubscribers\": true\n    },\n    \"content\": {\n      \"text\": {{ $('Chuẩn bị nội dung đăng').item.json.final_text_long.toJsonString() }},\n      \"platform\": \"youtube\",\n      \"mediaUrls\": [\"{{ $json.url }}\"]\n    },\n    \"accountId\": \"{{ $('Chuẩn bị nội dung đăng').item.json.youtube_id }}\"\n  }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        384,
+        0
+      ],
+      "id": "1d1509e4-13ff-4a8c-a9a5-7676a46d4627",
+      "name": "[YouTube] Đăng bài qua Blotato",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.blotato.com/v2/posts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "blotato-api-key",
+              "value": "={{ $('Chuẩn bị nội dung đăng').item.json.blotato_api_key }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"post\": {\n    \"target\": {\n      \"targetType\": \"threads\"\n    },\n    \"content\": {\n      \"text\": {{ $('Chuẩn bị nội dung đăng').item.json.final_text_short.toJsonString() }},\n      \"platform\": \"threads\",\n      \"mediaUrls\": [\"{{ $json.url }}\"]\n    },\n    \"accountId\": \"{{ $('Chuẩn bị nội dung đăng').item.json.threads_id }}\"\n  }\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        384,
+        352
+      ],
+      "id": "8c56259a-e454-4677-a771-305ee60b5829",
+      "name": "[Threads] Đăng bài qua Blotato",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.blotato.com/v2/posts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "blotato-api-key",
+              "value": "={{ $('Chuẩn bị nội dung đăng').item.json.blotato_api_key }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"post\": {\n    \"target\": {\n      \"targetType\": \"twitter\"\n    },\n    \"content\": {\n      \"text\": {{ $('Chuẩn bị nội dung đăng').item.json.final_text_long.toJsonString() }},\n      \"platform\": \"twitter\",\n      \"mediaUrls\": [\"{{ $json.url }}\"]\n    },\n    \"accountId\": \"{{ $('Chuẩn bị nội dung đăng').item.json.twitter_id }}\"\n  }\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        384,
+        800
+      ],
+      "id": "1f284a76-70ee-40df-b0a7-3afd4b939d85",
+      "name": "[Twitter] Đăng bài qua Blotato",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://backend.blotato.com/v2/posts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "blotato-api-key",
+              "value": "={{ $('Chuẩn bị nội dung đăng').item.json.blotato_api_key }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"post\": {\n    \"target\": {\n      \"targetType\": \"bluesky\"\n    },\n    \"content\": {\n      \"text\": {{ $('Chuẩn bị nội dung đăng').item.json.final_text_long.toJsonString() }},\n      \"platform\": \"bluesky\",\n      \"mediaUrls\": []\n    },\n    \"accountId\": \"{{ $('Chuẩn bị nội dung đăng').item.json.bluesky_id }}\"\n  }\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        384,
+        1200
+      ],
+      "id": "4604abf9-84cc-4394-9903-c02572a72e22",
+      "name": "[Bluesky] Đăng bài qua Blotato",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={\n  \"blotato_api_key\": \"\",\n  \"instagram_id\": \"\",\n  \"youtube_id\": \"\",\n  \"tiktok_id\": \"\",\n  \"facebook_id\": \"\",\n  \"facebook_page_id\": \"\",\n  \"threads_id\": \"\",\n  \"twitter_id\": \"\",\n  \"linkedin_id\": \"\",\n  \"pinterest_id\": \"\",\n  \"pinterest_board_id\": \"\",\n  \"bluesky_id\": \"\",\n  \"final_text_long\": \"{{ $json.caption }} {{ $json.Hastag }}\"\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -448,
+        800
+      ],
+      "id": "a88bc280-0266-46c0-a925-0d11b338fb7c",
+      "name": "Chuẩn bị nội dung đăng"
+    }
+  ],
+  "pinData": {
+    "Schedule Trigger1": [
+      {
+        "json": {
+          "timestamp": "2025-07-18T13:34:04.628+07:00",
+          "Readable date": "July 18th 2025, 1:34:04 pm",
+          "Readable time": "1:34:04 pm",
+          "Day of week": "Friday",
+          "Year": "2025",
+          "Month": "July",
+          "Day of month": "18",
+          "Hour": "13",
+          "Minute": "34",
+          "Second": "04",
+          "Timezone": "Asia/Ho_Chi_Minh (UTC+07:00)"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-08-19T18:42:35.026Z",
+      "updatedAt": "2025-08-19T18:42:35.026Z",
+      "role": "workflow:owner",
+      "workflowId": "fOJR2bsdr1A1lADE",
+      "projectId": "quf7HR2xEtUzOS9Z"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-08-21T16:45:31.000Z",
+  "versionId": "c5e7f37b-63ae-4d09-9be2-a82772944428"
+}
