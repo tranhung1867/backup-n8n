@@ -1,0 +1,935 @@
+{
+  "active": false,
+  "connections": {
+    "CRO Analysis Request": {
+      "main": [
+        [
+          {
+            "node": "Validate & Prepare Input",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate & Prepare Input": {
+      "main": [
+        [
+          {
+            "node": "Split Analysis Tasks",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Analysis Tasks": {
+      "main": [
+        [
+          {
+            "node": "Is Scrape Task?",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Is Screenshot Task?",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Is Performance Task?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Is Scrape Task?": {
+      "main": [
+        [
+          {
+            "node": "Scrape Landing Page",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Scrape Landing Page": {
+      "main": [
+        [
+          {
+            "node": "Process Scraped Content",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Error Handler",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process Scraped Content": {
+      "main": [
+        [
+          {
+            "node": "Merge Initial Results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Is Screenshot Task?": {
+      "main": [
+        [
+          {
+            "node": "Capture Screenshots",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Capture Screenshots": {
+      "main": [
+        [
+          {
+            "node": "Merge Initial Results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Is Performance Task?": {
+      "main": [
+        [
+          {
+            "node": "PageSpeed Analysis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PageSpeed Analysis": {
+      "main": [
+        [
+          {
+            "node": "Aggregate All Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge Initial Results": {
+      "main": [
+        [
+          {
+            "node": "AI Classification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Classification": {
+      "main": [
+        [
+          {
+            "node": "Parse Classification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GPT-4 Mini Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Classification",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Classification": {
+      "main": [
+        [
+          {
+            "node": "Need User Research?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Need User Research?": {
+      "main": [
+        [
+          {
+            "node": "Perplexity User Research",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Aggregate All Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Perplexity User Research": {
+      "main": [
+        [
+          {
+            "node": "Aggregate All Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate All Data": {
+      "main": [
+        [
+          {
+            "node": "Advanced CRO Analysis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Advanced CRO Analysis": {
+      "main": [
+        [
+          {
+            "node": "Generate HTML Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GPT-4 Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Advanced CRO Analysis",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate HTML Report": {
+      "main": [
+        [
+          {
+            "node": "Convert to PDF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to PDF": {
+      "main": [
+        [
+          {
+            "node": "Has Email?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Has Email?": {
+      "main": [
+        [
+          {
+            "node": "Send Email Report",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Email Report": {
+      "main": [
+        [
+          {
+            "node": "Send Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Error Handler": {
+      "main": [
+        [
+          {
+            "node": "Error Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-06-29T16:21:51.802Z",
+  "id": "QBTgwPE92NJAIym6",
+  "isArchived": false,
+  "meta": null,
+  "name": "My workflow 3",
+  "nodes": [
+    {
+      "parameters": {
+        "formTitle": "🎯 Phân Tích CRO Landing Page",
+        "formDescription": "Công cụ phân tích chuyên sâu giúp tối ưu tỷ lệ chuyển đổi cho landing page của bạn",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Landing Page URL",
+              "fieldType": "url",
+              "placeholder": "https://example.com",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Email nhận báo cáo",
+              "fieldType": "email",
+              "placeholder": "email@example.com"
+            },
+            {
+              "fieldLabel": "Mức độ phân tích",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {},
+                  {},
+                  {}
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Ngôn ngữ báo cáo",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {},
+                  {}
+                ]
+              },
+              "requiredField": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "43a9e38e-590f-48a5-9ef3-a9c31724587e",
+      "name": "CRO Analysis Request",
+      "type": "n8n-nodes-base.formTrigger",
+      "position": [
+        -1000,
+        400
+      ],
+      "webhookId": "cro-analysis-webhook",
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "jsCode": "// Validate và chuẩn hóa input\nconst url = $json['Landing Page URL'];\nconst email = $json['Email nhận báo cáo'] || '';\nconst analysisLevel = $json['Mức độ phân tích'];\nconst language = $json['Ngôn ngữ báo cáo'];\n\n// Validate URL\nif (!url || !url.match(/^https?:\\/\\/.+/)) {\n  throw new Error('URL không hợp lệ');\n}\n\n// Extract domain cho tracking\nconst domain = url.match(/https?:\\/\\/([^\\/]+)/)?.[1] || 'unknown';\n\n// Generate unique request ID\nconst requestId = `cro_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;\n\nreturn [{\n  json: {\n    url,\n    email,\n    analysisLevel,\n    language,\n    domain,\n    requestId,\n    timestamp: new Date().toISOString(),\n    metadata: {\n      userAgent: 'CRO-Analyzer/2.0',\n      timeout: analysisLevel === 'Chuyên sâu' ? 60000 : 30000\n    }\n  }\n}];"
+      },
+      "id": "6bd780e2-9fc5-43ed-a360-5d9218a55c53",
+      "name": "Validate & Prepare Input",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -800,
+        400
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const outputs = [];\n\n// Output 1: Scraping tasks\noutputs.push({\n  json: {\n    task: 'scrape',\n    url: $json.url,\n    requestId: $json.requestId,\n    metadata: $json.metadata\n  }\n});\n\n// Output 2: Screenshot tasks\noutputs.push({\n  json: {\n    task: 'screenshot',\n    url: $json.url,\n    requestId: $json.requestId,\n    devices: ['desktop', 'mobile']\n  }\n});\n\n// Output 3: Performance analysis (if advanced)\nif ($json.analysisLevel !== 'Cơ bản') {\n  outputs.push({\n    json: {\n      task: 'performance',\n      url: $json.url,\n      requestId: $json.requestId\n    }\n  });\n}\n\nreturn outputs;"
+      },
+      "id": "c3868b6a-40bc-475e-894c-494d30ff6a39",
+      "name": "Split Analysis Tasks",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -600,
+        400
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": ""
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.task }}",
+              "rightValue": "scrape",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "2a7f21e7-c530-497f-abc4-ffcfb20c6cd2",
+      "name": "Is Scrape Task?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        -400,
+        300
+      ],
+      "typeVersion": 2.1
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "options": {
+          "redirect": {
+            "redirect": {
+              "maxRedirects": 5
+            }
+          },
+          "response": {
+            "response": {
+              "fullResponse": true
+            }
+          },
+          "timeout": "={{ $json.metadata.timeout }}"
+        }
+      },
+      "id": "7239686e-9795-4966-9344-50710c9c2525",
+      "name": "Scrape Landing Page",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -200,
+        200
+      ],
+      "typeVersion": 4.2,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Extract và làm sạch content\nconst html = $json.data || '';\nconst headers = $json.headers || {};\nconst statusCode = $json.statusCode || 0;\n\nif (statusCode !== 200) {\n  return [{\n    json: {\n      error: true,\n      message: `HTTP ${statusCode}: Không thể truy cập trang`,\n      requestId: $('split-tasks').item.json.requestId\n    }\n  }];\n}\n\n// Remove scripts and styles\nconst cleanHtml = html\n  .replace(/<script[^>]*>.*?<\\/script>/gis, '')\n  .replace(/<style[^>]*>.*?<\\/style>/gis, '')\n  .replace(/<[^>]+>/g, ' ')\n  .replace(/\\s+/g, ' ')\n  .trim();\n\n// Extract metadata\nconst title = html.match(/<title[^>]*>([^<]+)<\\/title>/i)?.[1] || '';\nconst description = html.match(/<meta[^>]+name=[\"']description[\"'][^>]+content=[\"']([^\"']+)[\"']/i)?.[1] || '';\nconst keywords = html.match(/<meta[^>]+name=[\"']keywords[\"'][^>]+content=[\"']([^\"']+)[\"']/i)?.[1] || '';\n\n// Extract key elements\nconst h1Tags = (html.match(/<h1[^>]*>([^<]+)<\\/h1>/gi) || []).map(h => h.replace(/<[^>]+>/g, ''));\nconst ctaButtons = (html.match(/<button[^>]*>([^<]+)<\\/button>/gi) || []).map(b => b.replace(/<[^>]+>/g, ''));\nconst forms = (html.match(/<form[^>]*>/gi) || []).length;\n\nreturn [{\n  json: {\n    requestId: $('split-tasks').item.json.requestId,\n    content: cleanHtml.substring(0, 5000), // Limit content\n    metadata: {\n      title,\n      description,\n      keywords,\n      contentLength: cleanHtml.length,\n      language: headers['content-language'] || 'vi'\n    },\n    elements: {\n      h1Tags,\n      ctaButtons,\n      formCount: forms,\n      hasVideo: html.includes('<video') || html.includes('youtube.com/embed'),\n      hasTestimonials: html.includes('testimonial') || html.includes('review')\n    },\n    scrapedAt: new Date().toISOString()\n  }\n}];"
+      },
+      "id": "7b0005e3-6d7c-426f-abdb-4152887d406c",
+      "name": "Process Scraped Content",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        0,
+        200
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": ""
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.task }}",
+              "rightValue": "screenshot",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "4904ef73-7fac-419c-b267-5273fe5489be",
+      "name": "Is Screenshot Task?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        -400,
+        500
+      ],
+      "typeVersion": 2.1
+    },
+    {
+      "parameters": {
+        "url": "https://api.urlbox.io/v1/{{ $credentials.api_key }}/png",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "url",
+              "value": "={{ $json.url }}"
+            },
+            {
+              "name": "width",
+              "value": "={{ $json.devices.includes('mobile') ? 375 : 1440 }}"
+            },
+            {
+              "name": "height",
+              "value": "1024"
+            },
+            {
+              "name": "full_page",
+              "value": "false"
+            },
+            {
+              "name": "block_ads",
+              "value": "true"
+            },
+            {
+              "name": "quality",
+              "value": "80"
+            }
+          ]
+        },
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "id": "23ee7382-cbb4-49c9-b72b-d699362303fe",
+      "name": "Capture Screenshots",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -200,
+        500
+      ],
+      "typeVersion": 4.2,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "e7944b32-9779-45e1-b840-021f8ccd2815",
+      "name": "Merge Initial Results",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        200,
+        400
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "Bạn là chuyên gia phân tích landing page với 10+ năm kinh nghiệm.\n\nPhân tích nội dung sau và xác định:\n1. Loại landing page (SaaS/E-commerce/Course/Service/Blog/Other)\n2. Sản phẩm/dịch vụ chính\n3. Đối tượng mục tiêu\n4. USP (Unique Selling Proposition)\n\nNội dung:\n{{ $json.scraped.content }}\n\nMetadata:\n{{ JSON.stringify($json.scraped.metadata) }}\n\nElements:\n{{ JSON.stringify($json.scraped.elements) }}\n\nTrả về JSON format:\n{\n  \"landingType\": \"...\",\n  \"productName\": \"...\",\n  \"targetAudience\": \"...\",\n  \"usp\": \"...\",\n  \"competitors\": [\"...\"],\n  \"priceRange\": \"...\"\n}",
+        "options": {}
+      },
+      "id": "3b121b70-684f-4871-86a3-3fdddcbd1b1a",
+      "name": "AI Classification",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "position": [
+        320,
+        300
+      ],
+      "typeVersion": 1.9
+    },
+    {
+      "parameters": {
+        "options": {
+          "temperature": 0.5
+        }
+      },
+      "id": "7d17af8f-2dd7-410c-ad00-eff012b2714e",
+      "name": "GPT-4 Mini Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "position": [
+        400,
+        480
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "openAiApi": {
+          "id": "Q4OXSJLN8O6mYMaG",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Parse AI classification\nlet classification = {};\ntry {\n  const output = $json.output || '{}';\n  // Clean JSON from markdown if needed\n  const jsonStr = output.replace(/```json\\s*|\\s*```/g, '').trim();\n  classification = JSON.parse(jsonStr);\n} catch (error) {\n  classification = {\n    landingType: 'Unknown',\n    productName: 'Unknown',\n    error: 'Failed to parse classification'\n  };\n}\n\nreturn [{\n  json: {\n    ...classification,\n    requestId: $('Merge Initial Results').item.json.requestId\n  }\n}];"
+      },
+      "id": "228bee3d-13c3-4eb2-bc31-3b0a4b427f90",
+      "name": "Parse Classification",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        600,
+        300
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": ""
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $('Merge Initial Results').item.json.originalData.analysisLevel }}",
+              "rightValue": "Cơ bản",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "9cb14ccf-5ba1-4b0c-bb2f-13413d719e2c",
+      "name": "Need User Research?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        800,
+        400
+      ],
+      "typeVersion": 2.1
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.perplexity.ai/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBearerAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"model\": \"llama-3.1-sonar-large-128k-online\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are a market research expert. Analyze user psychology, needs, and concerns based on real data from forums, reviews, and trends. Language: {{ $('Merge Initial Results').item.json.originalData.language }}\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Research user insights for {{ $json.productName }} ({{ $json.landingType }} landing page). Focus on:\\n1. Pain points and challenges\\n2. Goals and aspirations\\n3. Common objections\\n4. Decision factors\\n5. Competitor comparisons\\n\\nProvide insights in JSON format.\"\n    }\n  ],\n  \"temperature\": 0.5,\n  \"max_tokens\": 2000,\n  \"return_citations\": true\n}",
+        "options": {
+          "timeout": 30000
+        }
+      },
+      "id": "b0843d72-eb72-4049-bbfc-42a9e1c4883b",
+      "name": "Perplexity User Research",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1000,
+        300
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "4F6TT0dmH71fZ60l",
+          "name": "PDF Acc"
+        },
+        "httpBearerAuth": {
+          "id": "TSsZtpFDNEyxeBaC",
+          "name": "Bearer Auth account"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": ""
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.task }}",
+              "rightValue": "performance",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "296110de-b152-44cb-a8d3-a7ac8bfc888e",
+      "name": "Is Performance Task?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        -400,
+        700
+      ],
+      "typeVersion": 2.1
+    },
+    {
+      "parameters": {
+        "url": "https://www.googleapis.com/pagespeedonline/v5/runPagespeed",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "url",
+              "value": "={{ $json.url }}"
+            },
+            {
+              "name": "strategy",
+              "value": "mobile"
+            },
+            {
+              "name": "category",
+              "value": "PERFORMANCE"
+            },
+            {
+              "name": "category",
+              "value": "SEO"
+            },
+            {
+              "name": "key",
+              "value": "={{ $credentials.api_key }}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 60000
+        }
+      },
+      "id": "b4b492cd-8345-4682-b8c1-d60fc643cc26",
+      "name": "PageSpeed Analysis",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -200,
+        700
+      ],
+      "typeVersion": 4.2,
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Tổng hợp tất cả dữ liệu\nconst requestId = $('Validate & Prepare Input').item.json.requestId;\nconst originalData = $('Validate & Prepare Input').item.json;\nconst scraped = $('Process Scraped Content').all()[0]?.json || {};\nconst classification = $('Parse Classification').all()[0]?.json || {};\nconst userResearch = $('Perplexity User Research').all()[0]?.json?.choices?.[0]?.message?.content || null;\nconst performance = $('PageSpeed Analysis').all()[0]?.json || null;\n\n// Build comprehensive data object\nconst analysisData = {\n  requestId,\n  url: originalData.url,\n  domain: originalData.domain,\n  analysisLevel: originalData.analysisLevel,\n  language: originalData.language,\n  timestamp: originalData.timestamp,\n  \n  // Scraped data\n  pageData: {\n    title: scraped.metadata?.title || '',\n    description: scraped.metadata?.description || '',\n    content: scraped.content || '',\n    elements: scraped.elements || {},\n    contentLength: scraped.metadata?.contentLength || 0\n  },\n  \n  // Classification\n  classification: {\n    type: classification.landingType || 'Unknown',\n    product: classification.productName || 'Unknown',\n    audience: classification.targetAudience || '',\n    usp: classification.usp || '',\n    competitors: classification.competitors || [],\n    priceRange: classification.priceRange || ''\n  },\n  \n  // User research (if available)\n  userInsights: userResearch ? JSON.parse(userResearch.replace(/```json\\s*|\\s*```/g, '').trim()) : null,\n  \n  // Performance (if available)\n  performance: performance ? {\n    score: performance.lighthouseResult?.categories?.performance?.score || 0,\n    seo: performance.lighthouseResult?.categories?.seo?.score || 0,\n    fcp: performance.lighthouseResult?.audits?.['first-contentful-paint']?.displayValue || 'N/A',\n    lcp: performance.lighthouseResult?.audits?.['largest-contentful-paint']?.displayValue || 'N/A',\n    cls: performance.lighthouseResult?.audits?.['cumulative-layout-shift']?.displayValue || 'N/A'\n  } : null\n};\n\nreturn [{\n  json: analysisData\n}];"
+      },
+      "id": "683d809e-b9d7-49d0-93b2-8c74510977ad",
+      "name": "Aggregate All Data",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1200,
+        500
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "Bạn là chuyên gia CRO với 15+ năm kinh nghiệm. Phân tích landing page và đưa ra recommendations cụ thể.\n\n## Dữ liệu phân tích:\n{{ JSON.stringify($json, null, 2) }}\n\n## Yêu cầu:\n1. Đánh giá tổng quan (điểm mạnh/yếu)\n2. Phân tích chi tiết các yếu tố CRO:\n   - Headline & Value Proposition\n   - Call-to-Action (CTA)\n   - Social Proof & Trust Signals\n   - Page Layout & UX\n   - Content Quality\n   - Mobile Optimization\n   \n3. Đưa ra 10-15 recommendations cụ thể, ưu tiên theo impact\n4. Suggest A/B testing ideas\n5. Competitive advantages\n\n## Output format:\nMarkdown với structure rõ ràng, dùng emoji cho dễ đọc.\n\nNgôn ngữ: {{ $json.language }}",
+        "options": {}
+      },
+      "id": "4e27e76d-11aa-4a7f-a99f-dda93e807fc2",
+      "name": "Advanced CRO Analysis",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "position": [
+        1400,
+        500
+      ],
+      "typeVersion": 1.9
+    },
+    {
+      "parameters": {
+        "options": {
+          "temperature": 0.7
+        }
+      },
+      "id": "ca91b1df-1842-4a99-99b5-a35e3c1ab3f4",
+      "name": "GPT-4 Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "position": [
+        1400,
+        680
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "openAiApi": {
+          "id": "Q4OXSJLN8O6mYMaG",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Generate comprehensive report\nconst data = $('Aggregate All Data').item.json;\nconst croAnalysis = $json.output || '';\nconst screenshot = $('Capture Screenshots').all()[0]?.binary?.data || null;\n\nconst timestamp = new Date().toISOString().split('T')[0];\nconst reportTitle = `CRO Analysis Report - ${data.domain} - ${timestamp}`;\n\n// Convert markdown to HTML\nconst marked = require('marked'); // Assuming marked is available\nconst analysisHtml = marked.parse(croAnalysis);\n\n// Build complete HTML report\nconst htmlReport = `\n<!DOCTYPE html>\n<html lang=\"${data.language === 'English' ? 'en' : 'vi'}\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>${reportTitle}</title>\n    <style>\n        * { margin: 0; padding: 0; box-sizing: border-box; }\n        body { \n            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;\n            line-height: 1.6;\n            color: #333;\n            background: #f5f5f5;\n        }\n        .container {\n            max-width: 1200px;\n            margin: 0 auto;\n            background: white;\n            box-shadow: 0 0 20px rgba(0,0,0,0.1);\n        }\n        .header {\n            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);\n            color: white;\n            padding: 40px;\n            text-align: center;\n        }\n        .header h1 { font-size: 2.5em; margin-bottom: 10px; }\n        .header p { opacity: 0.9; }\n        .meta-info {\n            display: grid;\n            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\n            gap: 20px;\n            padding: 30px;\n            background: #f8f9fa;\n            border-bottom: 1px solid #e9ecef;\n        }\n        .meta-card {\n            background: white;\n            padding: 20px;\n            border-radius: 8px;\n            box-shadow: 0 2px 5px rgba(0,0,0,0.1);\n        }\n        .meta-card h3 { \n            color: #667eea;\n            font-size: 0.9em;\n            text-transform: uppercase;\n            margin-bottom: 5px;\n        }\n        .meta-card p { \n            font-size: 1.1em;\n            font-weight: 600;\n        }\n        .content { padding: 40px; }\n        .screenshot-section {\n            margin: 30px 0;\n            text-align: center;\n        }\n        .screenshot-section img {\n            max-width: 100%;\n            border-radius: 8px;\n            box-shadow: 0 5px 20px rgba(0,0,0,0.2);\n        }\n        .analysis-section {\n            margin-top: 40px;\n        }\n        .analysis-section h2 {\n            color: #2c3e50;\n            border-bottom: 3px solid #667eea;\n            padding-bottom: 10px;\n            margin-bottom: 20px;\n        }\n        .score-card {\n            background: #f8f9fa;\n            padding: 20px;\n            border-radius: 8px;\n            margin: 20px 0;\n        }\n        .score-value {\n            font-size: 3em;\n            font-weight: bold;\n            color: #667eea;\n        }\n        .recommendations {\n            background: #e8f4f8;\n            padding: 30px;\n            border-radius: 8px;\n            margin: 30px 0;\n        }\n        .footer {\n            background: #2c3e50;\n            color: white;\n            padding: 30px;\n            text-align: center;\n        }\n        @media print {\n            .container { box-shadow: none; }\n            .header { background: #667eea; print-color-adjust: exact; }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"container\">\n        <div class=\"header\">\n            <h1>📊 ${reportTitle}</h1>\n            <p>Comprehensive Conversion Rate Optimization Analysis</p>\n        </div>\n        \n        <div class=\"meta-info\">\n            <div class=\"meta-card\">\n                <h3>URL Analyzed</h3>\n                <p>${data.url}</p>\n            </div>\n            <div class=\"meta-card\">\n                <h3>Page Type</h3>\n                <p>${data.classification.type}</p>\n            </div>\n            <div class=\"meta-card\">\n                <h3>Product/Service</h3>\n                <p>${data.classification.product}</p>\n            </div>\n            <div class=\"meta-card\">\n                <h3>Analysis Date</h3>\n                <p>${timestamp}</p>\n            </div>\n        </div>\n        \n        <div class=\"content\">\n            ${screenshot ? `\n            <div class=\"screenshot-section\">\n                <h2>📸 Landing Page Screenshot</h2>\n                <img src=\"data:image/png;base64,${screenshot}\" alt=\"Landing page screenshot\">\n            </div>\n            ` : ''}\n            \n            ${data.performance ? `\n            <div class=\"score-card\">\n                <h3>Performance Metrics</h3>\n                <div style=\"display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin-top: 20px;\">\n                    <div>\n                        <div class=\"score-value\">${Math.round(data.performance.score * 100)}</div>\n                        <p>Performance Score</p>\n                    </div>\n                    <div>\n                        <div class=\"score-value\">${Math.round(data.performance.seo * 100)}</div>\n                        <p>SEO Score</p>\n                    </div>\n                    <div>\n                        <p style=\"font-size: 1.5em; font-weight: bold;\">${data.performance.fcp}</p>\n                        <p>First Contentful Paint</p>\n                    </div>\n                    <div>\n                        <p style=\"font-size: 1.5em; font-weight: bold;\">${data.performance.lcp}</p>\n                        <p>Largest Contentful Paint</p>\n                    </div>\n                </div>\n            </div>\n            ` : ''}\n            \n            <div class=\"analysis-section\">\n                ${analysisHtml}\n            </div>\n        </div>\n        \n        <div class=\"footer\">\n            <p><strong>Generated by Enhanced CRO Analyzer v2.0</strong></p>\n            <p>© ${new Date().getFullYear()} - Confidential Report</p>\n        </div>\n    </div>\n</body>\n</html>\n`;\n\nreturn [{\n  json: {\n    reportTitle,\n    htmlReport,\n    requestId: data.requestId,\n    email: data.email || '',\n    format: 'html'\n  }\n}];"
+      },
+      "id": "51522fda-1533-4b22-a050-e4dce6b51262",
+      "name": "Generate HTML Report",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1660,
+        500
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.pdfshift.io/v3/convert/pdf",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"source\": \"{{ $json.htmlReport }}\",\n  \"format\": \"A4\",\n  \"margin\": \"20px\",\n  \"landscape\": false,\n  \"use_print\": true\n}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "id": "665efee1-884b-4edc-8abc-42d2e4d24c62",
+      "name": "Convert to PDF",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1800,
+        500
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "4F6TT0dmH71fZ60l",
+          "name": "PDF Acc"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": ""
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $('Generate HTML Report').item.json.email }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "ea45f6aa-b7c6-485f-a8f2-638c51d5fe3a",
+      "name": "Has Email?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        2000,
+        500
+      ],
+      "typeVersion": 2.1
+    },
+    {
+      "parameters": {
+        "fromEmail": "cro-analyzer@yourdomain.com",
+        "toEmail": "={{ $('Generate HTML Report').item.json.email }}",
+        "subject": "CRO Analysis Report - {{ $('Generate HTML Report').item.json.reportTitle }}",
+        "options": {}
+      },
+      "id": "48006f43-aace-4eb5-8a3c-00fd5371a7d2",
+      "name": "Send Email Report",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        2200,
+        400
+      ],
+      "typeVersion": 2.1,
+      "webhookId": "0109168d-8056-468e-8030-ae8508077e82"
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "id": "46e1302b-e8e5-4aa1-bb19-71891ec759ec",
+      "name": "Send Response",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "position": [
+        2400,
+        500
+      ],
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "jsCode": "// Error handler\nconst error = $json.error || 'Unknown error occurred';\nconst requestId = $('Validate & Prepare Input').item.json?.requestId || 'N/A';\n\nreturn [{\n  json: {\n    success: false,\n    requestId,\n    error,\n    timestamp: new Date().toISOString(),\n    suggestion: 'Please check the URL and try again. If the problem persists, contact support.'\n  }\n}];"
+      },
+      "id": "6453f3d4-56a4-48f0-9258-b854d6f603bd",
+      "name": "Error Handler",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        0,
+        0
+      ],
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {
+          "responseCode": 400
+        }
+      },
+      "id": "d3af2970-6309-4568-85c0-16a6c7cec5c3",
+      "name": "Error Response",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "position": [
+        200,
+        0
+      ],
+      "typeVersion": 1.1
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-06-29T16:21:51.806Z",
+      "updatedAt": "2025-06-29T16:21:51.806Z",
+      "role": "workflow:owner",
+      "workflowId": "QBTgwPE92NJAIym6",
+      "projectId": "quf7HR2xEtUzOS9Z"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-06-29T16:21:51.802Z",
+  "versionId": "ac4f71de-d276-4581-af6d-776547a1c48b"
+}
