@@ -1,0 +1,338 @@
+{
+  "active": false,
+  "connections": {
+    "GPT - Image - 1": {
+      "main": [
+        [
+          {
+            "node": "Upload file",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent1": {
+      "main": [
+        [
+          {
+            "node": "GPT - Image - 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload file": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "DeepSeek Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code Tool": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent1",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-08-13T12:21:19.433Z",
+  "id": "UvZWg1ZtHgIQ4NFQ",
+  "isArchived": false,
+  "meta": null,
+  "name": "My workflow 4",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -840,
+        180
+      ],
+      "id": "8188b646-3e66-44b3-89d7-dcea9010a9d4",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -660,
+        -140
+      ],
+      "id": "2997f8c0-e770-454f-8211-399f366b7925",
+      "name": "Get row(s) in sheet",
+      "credentials": {}
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        -380,
+        -100
+      ],
+      "id": "445e42c0-470e-4238-91ab-0f1284fe4ecc",
+      "name": "AI Agent",
+      "retryOnFail": true
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        -140,
+        480
+      ],
+      "id": "b994278f-c0be-4f9f-a072-229148de8c9c",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        460,
+        0
+      ],
+      "id": "e9734869-c0a5-491e-a387-d1128f3b633d",
+      "name": "Update row in sheet",
+      "credentials": {}
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "4231b588-25db-4968-8fae-ca1436c002eb",
+      "name": "Generate an image",
+      "credentials": {}
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "model": "gpt-image-1",
+        "prompt": "={{ $json.output.prompt_image }}",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        -60,
+        180
+      ],
+      "id": "2ddac643-320b-4a55-bacd-2b9b60a5b2a2",
+      "name": "GPT - Image - 1"
+    },
+    {
+      "parameters": {
+        "name": "=img-{{ $('Get row(s) in sheet').item.json.row_number }}.png",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "https://drive.google.com/drive/u/1/folders/120m1r1xTa8T_z1si-1BRgm_rrz2gZ0W9",
+          "mode": "url"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        220,
+        180
+      ],
+      "id": "3eff6cb5-eee0-44e0-bc0c-abf715c29ae4",
+      "name": "Upload file"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -740,
+        420
+      ],
+      "id": "464c7e83-a213-4518-a6b1-ca76716ef460",
+      "name": "2.5 flash"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatDeepSeek",
+      "typeVersion": 1,
+      "position": [
+        -440,
+        420
+      ],
+      "id": "5de5c01e-b239-4a7d-b83b-b850dd08f7a7",
+      "name": "DeepSeek Chat Model"
+    },
+    {
+      "parameters": {
+        "model": "openai/gpt-oss-20b",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        -540,
+        460
+      ],
+      "id": "c35e004a-857d-4a68-b3a2-ca98f0ff6a55",
+      "name": "gpt-oss-20b"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        -620,
+        180
+      ],
+      "id": "63d8c4f2-a365-4599-8774-879bcdfd5e43",
+      "name": "Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "38P5AQchG6NSZWlG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        -460,
+        180
+      ],
+      "id": "a0e0f1af-dfce-4f75-b3ad-201702fa57fe",
+      "name": "AI Agent1"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "list",
+          "value": ""
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        460,
+        200
+      ],
+      "id": "274d99bd-40e5-43b6-95c9-08cb032dc049",
+      "name": "Google Sheets1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "38P5AQchG6NSZWlG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.toolCode",
+      "typeVersion": 1.1,
+      "position": [
+        -180,
+        360
+      ],
+      "id": "e8ef9af9-4579-45d1-b822-0bd835a91f84",
+      "name": "Code Tool"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-08-13T12:21:19.439Z",
+      "updatedAt": "2025-08-13T12:21:19.439Z",
+      "role": "workflow:owner",
+      "workflowId": "UvZWg1ZtHgIQ4NFQ",
+      "projectId": "quf7HR2xEtUzOS9Z"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-08-13T12:25:31.000Z",
+  "versionId": "57b0e938-8b59-452d-b848-6353660fe772"
+}
