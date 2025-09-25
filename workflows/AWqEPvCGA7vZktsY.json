@@ -1,0 +1,381 @@
+{
+  "active": false,
+  "connections": {
+    "Sum": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain1": {
+      "main": [
+        [
+          {
+            "node": "Split Out1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Basic LLM Chain1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out1": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Sum",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets1": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-05-22T02:38:41.435Z",
+  "id": "AWqEPvCGA7vZktsY",
+  "isArchived": false,
+  "meta": null,
+  "name": "Addnutri",
+  "nodes": [
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "7de607ae-5168-484f-b340-a731bb9aa10b",
+              "name": "=total_calories",
+              "value": "={{ $json.foods[0].nf_calories }}",
+              "type": "number"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        116,
+        160
+      ],
+      "id": "3036389d-0baf-4ac6-8bd5-3eb08998263b",
+      "name": "Sum"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.query }}",
+        "hasOutputParser": true,
+        "messages": {
+          "messageValues": [
+            {
+              "message": "=#Overview:\n- Bạn là một trợ lý AI hữu ích, bạn giỏi ngoại ngữ và am hiểu về các vấn đề về dinh dưỡng. Nhiệm vụ của bạn là parse thông tin nhận được thành các hoạt động riêng biệt, và value của nó bên trong là tiếng Anh.\n\n\n#Hãy tham khảo bộ mẫu ví dụ sau.\n##Ví dụ 1:\nInput: Tôi uống 500ml trà sữa\nOutput: drink 500ml milk tea\n\n##Ví dụ 2:\nInput: Uống 500ml trà sữa và ăn 1 ổ bánh mì\nOutput: drink 500ml milk tea,eat 1 bread\n"
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.5,
+      "position": [
+        -920,
+        160
+      ],
+      "id": "5d87ec7a-3643-470f-9a8a-70cacc67d131",
+      "name": "Basic LLM Chain1"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -980,
+        360
+      ],
+      "id": "9109d8c1-10d3-4734-949c-75a9f47f4227",
+      "name": "OpenAI Chat Model2",
+      "credentials": {
+        "openAiApi": {
+          "id": "Q4OXSJLN8O6mYMaG",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "response",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        -544,
+        160
+      ],
+      "id": "1fbb044c-3acf-4df9-8a35-fd91639ed708",
+      "name": "Split Out1"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        -324,
+        160
+      ],
+      "id": "b5ff480a-38ea-4f54-931a-958bad95e599",
+      "name": "Loop Over Items1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://trackapi.nutritionix.com/v2/natural/nutrients",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "x-app-id",
+              "value": "b18208fc"
+            },
+            {
+              "name": "x-app-key",
+              "value": "69d5009e1ae93b511660197982c3d74e"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "query",
+              "value": "={{ $json.response }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -104,
+        160
+      ],
+      "id": "201a8699-819b-494f-afa5-4e1066aff4ce",
+      "name": "HTTP Request1"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1KOx1Srwk_o55VEOnHbb0-bvbI1F_UHc77ODEOgl-LvQ",
+          "mode": "list",
+          "cachedResultName": "Content Reels",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KOx1Srwk_o55VEOnHbb0-bvbI1F_UHc77ODEOgl-LvQ/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 771926731,
+          "mode": "list",
+          "cachedResultName": "calor_nutrion",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1KOx1Srwk_o55VEOnHbb0-bvbI1F_UHc77ODEOgl-LvQ/edit#gid=771926731"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "created_time": "={{ $now.format('yyyy-MM-dd') }}",
+            "calors": "={{ $json.total_calories }}",
+            "food": "={{ $('Loop Over Items1').item.json.response }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "created_time",
+              "displayName": "created_time",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "food",
+              "displayName": "food",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "calors",
+              "displayName": "calors",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        336,
+        235
+      ],
+      "id": "872e7519-b2ab-4164-b2ec-76d6223cce46",
+      "name": "Google Sheets1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "38P5AQchG6NSZWlG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "bdaaea30-3511-4a46-bba2-54d15b659dfc",
+              "name": "response",
+              "value": "done",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -104,
+        -40
+      ],
+      "id": "74b0c77c-fd62-4700-baf5-9f4b4b37016b",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "inputSource": "passthrough"
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -1120,
+        160
+      ],
+      "id": "609632d7-938e-4fc7-a18e-f2503b69c40d",
+      "name": "When Executed by Another Workflow"
+    }
+  ],
+  "pinData": {
+    "When Executed by Another Workflow": [
+      {
+        "json": {
+          "query": "Tôi uống 1 ly cà phê sữa"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-05-22T02:38:41.439Z",
+      "updatedAt": "2025-05-22T02:38:41.439Z",
+      "role": "workflow:owner",
+      "workflowId": "AWqEPvCGA7vZktsY",
+      "projectId": "quf7HR2xEtUzOS9Z"
+    }
+  ],
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-05-27T18:52:54.000Z",
+  "versionId": "e86ecd1c-257c-4be3-a5b2-3f59a630f4b0"
+}
