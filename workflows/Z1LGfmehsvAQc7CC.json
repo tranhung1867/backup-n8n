@@ -1,0 +1,507 @@
+{
+  "active": false,
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get Leads",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get new lead": {
+      "main": [
+        [
+          {
+            "node": "Red Sheet",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger1": {
+      "main": [
+        []
+      ]
+    },
+    "Get Leads": {
+      "main": [
+        [
+          {
+            "node": "Get new lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set data": {
+      "main": [
+        [
+          {
+            "node": "Execute Workflow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        []
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Red Sheet": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Set data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Workflow": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-06-27T07:03:18.320Z",
+  "id": "Z1LGfmehsvAQc7CC",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "GetLead CRM Digizone",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 1
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        280,
+        -280
+      ],
+      "id": "b3071562-1498-4c76-9c5f-b77dfb62a97e",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "url": "https://cskh.digizone.vn/api/leads/",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "authtoken",
+              "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoibjhuIiwibmFtZSI6ImdldGxlYWQiLCJBUElfVElNRSI6MTc1MTAwMjc2Nn0.sTIW0jSj89lIHun8RLms3FzQQ342X5vyYdrwwIRhIrY"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        440,
+        -280
+      ],
+      "id": "8196eabe-7638-4289-9719-b03f0a8ca1d8",
+      "name": "Get Leads"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Lấy toàn bộ dữ liệu từ node trước\nconst allLeads = items.map(item => item.json);\n\n// Kiểm tra dữ liệu\nif (!Array.isArray(allLeads) || allLeads.length === 0) {\n  throw new Error(\"Không có dữ liệu lead đầu vào.\");\n}\n\n// Lọc ra những lead có source là \"Form Web\"\nconst formLeads = allLeads.filter(\n  lead => (lead.source_name || '').toLowerCase().trim() === 'form web'\n);\n\n// Nếu không có lead nào thỏa điều kiện, trả về rỗng\nif (formLeads.length === 0) {\n  return [];\n}\n\n// Sắp xếp theo ngày thêm mới nhất\nformLeads.sort((a, b) => new Date(b.dateadded) - new Date(a.dateadded));\n\n// Lấy lead mới nhất\nconst lead = formLeads[0];\n\n// Trả về thông tin lead\nreturn [{\n  json: {\n    id: lead.id,\n    name: lead.name,\n    email: lead.email,\n    website: lead.website,\n    phone: lead.phonenumber,\n    company: lead.company,\n    industry: lead.customfields?.find(f => f.label === \"Ngành nghề\")?.value || '',\n    dateadded: lead.dateadded,\n    source: lead.source_name || '',\n    description: lead.description || ''\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        600,
+        -280
+      ],
+      "id": "6c1b6d68-8174-4581-80ef-97fe6ec8560d",
+      "name": "Get new lead"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 2
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -100,
+        -640
+      ],
+      "id": "578acf6d-1be1-4bfd-822f-b2d0528e5183",
+      "name": "Schedule Trigger1"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "qRdMhuQPLoUG0On5",
+          "mode": "list",
+          "cachedResultName": "Phân tích landing page -Main"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "website": "={{ $json.website }}"
+          },
+          "matchingColumns": [
+            "website"
+          ],
+          "schema": [
+            {
+              "id": "website",
+              "displayName": "website",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        1700,
+        -340
+      ],
+      "id": "fafa8c1f-3267-463f-a5fc-32444128959b",
+      "name": "Execute Workflow"
+    },
+    {
+      "parameters": {
+        "jsCode": "const lead = $input.item.json;\n\nreturn [\n  {\n    json: {\n      name: lead.name || '',\n      email: lead.email || '',\n      website: lead.website || '',\n      phone: lead.phone || ''\n    }\n  }\n];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1520,
+        -340
+      ],
+      "id": "2cebd05d-f8f0-4bc6-ab2f-34b73382b0bb",
+      "name": "Set data"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "48fb55c7-a6c4-41fe-9a85-9f80935f861c",
+              "name": "lastLeadId",
+              "value": "={{ $json.id }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -120,
+        -860
+      ],
+      "id": "8be1a540-15cf-4c2f-973c-b834765f29ed",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "195ieMMoFk509Dg8g4MBGLYzpw0jNx651o8b4zP23wQ4",
+          "mode": "list",
+          "cachedResultName": "Bản sao của Data test n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/195ieMMoFk509Dg8g4MBGLYzpw0jNx651o8b4zP23wQ4/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 11886546,
+          "mode": "list",
+          "cachedResultName": "lead_tracking",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/195ieMMoFk509Dg8g4MBGLYzpw0jNx651o8b4zP23wQ4/edit#gid=11886546"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "lead_id": "={{ $('Get new lead').item.json.id }}"
+          },
+          "matchingColumns": [
+            "lead_id"
+          ],
+          "schema": [
+            {
+              "id": "lead_id",
+              "displayName": "lead_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1020,
+        -640
+      ],
+      "id": "43f03fda-289e-49e1-bce6-babd66efcfc8",
+      "name": "Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "RT62vkMV5zYwEIvU",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "71633e3c-226d-4561-9f97-60aa705e17fb",
+              "leftValue": "=={{ ($items('Red Sheet').length === 0).toBoolean() }}\n",
+              "rightValue": "0",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        860,
+        -480
+      ],
+      "id": "49bf058b-36d7-45a7-898c-7ab5bd1ea60b",
+      "name": "If",
+      "executeOnce": false,
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        -420
+      ],
+      "id": "2bdaa477-81ae-4436-8cd1-e2d9cf6d0465",
+      "name": "No Operation, do nothing"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "195ieMMoFk509Dg8g4MBGLYzpw0jNx651o8b4zP23wQ4",
+          "mode": "list",
+          "cachedResultName": "Bản sao của Data test n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/195ieMMoFk509Dg8g4MBGLYzpw0jNx651o8b4zP23wQ4/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 11886546,
+          "mode": "list",
+          "cachedResultName": "lead_tracking",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/195ieMMoFk509Dg8g4MBGLYzpw0jNx651o8b4zP23wQ4/edit#gid=11886546"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "lead_id",
+              "lookupValue": "={{ $('Get new lead').first().json.id }}"
+            }
+          ]
+        },
+        "options": {
+          "returnFirstMatch": true
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        720,
+        -520
+      ],
+      "id": "cfae5458-f779-44cb-891c-d17aa7234071",
+      "name": "Red Sheet",
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "RT62vkMV5zYwEIvU",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "chooseBranch",
+        "useDataOfInput": 2
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.1,
+      "position": [
+        1300,
+        -340
+      ],
+      "id": "6f2a2287-7aaa-4c1b-9fb4-bb80759da417",
+      "name": "Merge",
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "f5502e8b-31fb-4907-95de-bcb4fba680a1",
+              "leftValue": "={{ $('Set data').item.json.website }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2000,
+        -320
+      ],
+      "id": "857bb893-a51f-4157-90ea-99c2308ba64e",
+      "name": "If1"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "shared": [
+    {
+      "createdAt": "2025-06-27T07:03:18.323Z",
+      "updatedAt": "2025-06-27T07:03:18.323Z",
+      "role": "workflow:owner",
+      "workflowId": "Z1LGfmehsvAQc7CC",
+      "projectId": "quf7HR2xEtUzOS9Z"
+    }
+  ],
+  "staticData": {
+    "node:Schedule Trigger": {
+      "recurrenceRules": []
+    },
+    "node:Schedule Trigger1": {
+      "recurrenceRules": []
+    }
+  },
+  "tags": [],
+  "triggerCount": 2,
+  "updatedAt": "2025-08-21T08:14:33.000Z",
+  "versionId": "281b947a-4b52-4e79-8c2a-36e01887ec69"
+}
